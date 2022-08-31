@@ -10,7 +10,7 @@ title: Noor's Notebook
 description: A blogging notebook for AP Computer Science
 github_username: Unlqsting
 # you can comment the below line out if your repo name is not different than your baseurl
-github_repo: "AP-Comp-fastpages"
+github_repo: "APCSPnoor"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
@@ -34,7 +34,7 @@ url: "https://Unlqsting.github.io" # the base hostname & protocol for your site,
 #
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
-baseurl: "/AP-Comp-fastpages" # the subpath of your site, e.g. "/blog".
+baseurl: "/APCSPnoor" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
@@ -81,7 +81,7 @@ html_escape:
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
-theme: cayman
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -100,7 +100,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/minima
+remote_theme: jekyll/cayman
 
 titles_from_headings:
   enabled:     true
