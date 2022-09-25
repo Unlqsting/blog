@@ -122,42 +122,38 @@ person {&#39;name&#39;: &#39;John Doe&#39;, &#39;age&#39;: 18, &#39;score&#39;: 
 
 <span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Mortensen&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;DOB&quot;</span><span class="p">:</span> <span class="s2">&quot;October 21&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Residence&quot;</span><span class="p">:</span> <span class="s2">&quot;San Diego&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;jmortensen@powayusd.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Owns_Cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;2015-Fusion&quot;</span><span class="p">,</span> <span class="s2">&quot;2011-Ranger&quot;</span><span class="p">,</span> <span class="s2">&quot;2003-Excursion&quot;</span><span class="p">,</span> <span class="s2">&quot;1997-F350&quot;</span><span class="p">,</span> <span class="s2">&quot;1969-Cadillac&quot;</span><span class="p">]</span>
+    <span class="s2">&quot;FoodName&quot;</span><span class="p">:</span> <span class="s2">&quot;Chocolate Genoise sponge&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cuisine&quot;</span><span class="p">:</span> <span class="s2">&quot;German&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Price&quot;</span><span class="p">:</span> <span class="s2">&quot;$5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Calories&quot;</span><span class="p">:</span> <span class="s2">&quot;230&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Ingredients&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Eggs&quot;</span><span class="p">,</span> <span class="s2">&quot;Milk&quot;</span><span class="p">,</span> <span class="s2">&quot;Cocoa Powder&quot;</span><span class="p">,</span> <span class="s2">&quot;Sugar&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanilla Extract&quot;</span><span class="p">,</span> <span class="s2">&quot;Flour&quot;</span><span class="p">]</span>
 <span class="p">})</span>
 
 <span class="c1"># Append to List a 2nd Dictionary of key/values</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sunny&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Naidu&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;DOB&quot;</span><span class="p">:</span> <span class="s2">&quot;August 2&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Residence&quot;</span><span class="p">:</span> <span class="s2">&quot;Temecula&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;snaidu@powayusd.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Owns_Cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;4Runner&quot;</span><span class="p">]</span>
+    <span class="s2">&quot;FoodName&quot;</span><span class="p">:</span> <span class="s2">&quot;Chocolate Genoise sponge&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cuisine&quot;</span><span class="p">:</span> <span class="s2">&quot;German&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Price&quot;</span><span class="p">:</span> <span class="s2">&quot;$5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Calories&quot;</span><span class="p">:</span> <span class="s2">&quot;230&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Ingredients&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Eggs&quot;</span><span class="p">,</span> <span class="s2">&quot;Milk&quot;</span><span class="p">,</span> <span class="s2">&quot;Cocoa Powder&quot;</span><span class="p">,</span> <span class="s2">&quot;Sugar&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanilla Extract&quot;</span><span class="p">,</span> <span class="s2">&quot;Flour&quot;</span><span class="p">]</span>
 <span class="p">})</span>
 
 <span class="c1">#append to List a 3rd Dictionary of key/values</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Noor&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Bijapur&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;DOB&quot;</span><span class="p">:</span> <span class="s2">&quot;April 9&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Residence&quot;</span><span class="p">:</span> <span class="s2">&quot;San Diego&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;noorbijapur500@gmail.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Owns_Cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;718 Cayman GTR Porsche&quot;</span><span class="p">]</span>
+    <span class="s2">&quot;FoodName&quot;</span><span class="p">:</span> <span class="s2">&quot;Chocolate Genoise sponge&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cuisine&quot;</span><span class="p">:</span> <span class="s2">&quot;German&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Price&quot;</span><span class="p">:</span> <span class="s2">&quot;$5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Calories&quot;</span><span class="p">:</span> <span class="s2">&quot;230&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Ingredients&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Eggs&quot;</span><span class="p">,</span> <span class="s2">&quot;Milk&quot;</span><span class="p">,</span> <span class="s2">&quot;Cocoa Powder&quot;</span><span class="p">,</span> <span class="s2">&quot;Sugar&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanilla Extract&quot;</span><span class="p">,</span> <span class="s2">&quot;Flour&quot;</span><span class="p">]</span>
 <span class="p">})</span>
 
 <span class="c1">#append to List a 3rd Dictionary of key/values</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Alan&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Liu-Sui&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;DOB&quot;</span><span class="p">:</span> <span class="s2">&quot;June 29&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Residence&quot;</span><span class="p">:</span> <span class="s2">&quot;San Diego&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;alanls39391876543@gmail.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Owns_Cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Bugatti Chiron Supersport 300+&quot;</span><span class="p">]</span>
+    <span class="s2">&quot;FoodName&quot;</span><span class="p">:</span> <span class="s2">&quot;Chocolate Genoise sponge&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cuisine&quot;</span><span class="p">:</span> <span class="s2">&quot;German&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Price&quot;</span><span class="p">:</span> <span class="s2">&quot;$5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Calories&quot;</span><span class="p">:</span> <span class="s2">&quot;230&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Ingredients&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Eggs&quot;</span><span class="p">,</span> <span class="s2">&quot;Milk&quot;</span><span class="p">,</span> <span class="s2">&quot;Cocoa Powder&quot;</span><span class="p">,</span> <span class="s2">&quot;Sugar&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanilla Extract&quot;</span><span class="p">,</span> <span class="s2">&quot;Flour&quot;</span><span class="p">]</span>
 <span class="p">})</span>
 
 <span class="c1"># Print the data structure</span>
@@ -183,7 +179,7 @@ person {&#39;name&#39;: &#39;John Doe&#39;, &#39;age&#39;: 18, &#39;score&#39;: 
     <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer: &quot;</span> <span class="o">+</span> <span class="n">msg</span><span class="p">)</span>
 
-<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">&quot;Please write your name below:&quot;</span><span class="p">)</span>
+<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">&quot;Please write your preference below:&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
