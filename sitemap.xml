@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://unlqsting.github.io/AP-Comp-fastpages/jupyter/2020/02/20/test.html</loc>
-<lastmod>2020-02-20T00:00:00-06:00</lastmod>
-</url>
-<url>
 <loc>https://unlqsting.github.io/AP-Comp-fastpages/developer%20tools/tool%20set-up/fastpages/jupyter/2022/08/29/Markdown_Code-test.html</loc>
 <lastmod>2022-08-29T00:00:00-05:00</lastmod>
 </url>
@@ -29,6 +25,16 @@
 <lastmod>2022-09-15T00:00:00-05:00</lastmod>
 </url>
 <url>
+<loc>https://unlqsting.github.io/AP-Comp-fastpages/project/college%20board/questions/2022/09/25/PBLProject.html</loc>
+<lastmod>2022-09-25T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://unlqsting.github.io/AP-Comp-fastpages/weeks/</loc>
+</url>
+<url>
+<loc>https://unlqsting.github.io/AP-Comp-fastpages/blogs/</loc>
+</url>
+<url>
 <loc>https://unlqsting.github.io/AP-Comp-fastpages/about/</loc>
 </url>
 <url>
@@ -39,5 +45,9 @@
 </url>
 <url>
 <loc>https://unlqsting.github.io/AP-Comp-fastpages/categories/</loc>
+</url>
+<url>
+<loc>https://unlqsting.github.io/AP-Comp-fastpages/_pages/SortingTable/</loc>
+<lastmod>2022-09-27T15:03:53-05:00</lastmod>
 </url>
 </urlset>
