@@ -21,19 +21,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>import requests
-import json
-
-
-<span class="nv">url</span> <span class="o">=</span> <span class="s2">&quot;https://poway.instructure.com/api/v1/courses/127052/assignment_groups&quot;</span>
-
-<span class="nv">headers</span> <span class="o">=</span> <span class="o">{</span>
-    <span class="s2">&quot;canvas_api&quot;</span> : <span class="s2">&quot;2573~X9WkwSJ62BwHnSo6mveXYKv9kcSCAG3VrCJRrmrnYCgwJuzAa155k1zG8PYcySHa&quot;</span>
-<span class="o">}</span>
-
-<span class="nv">r</span> <span class="o">=</span> requests.get<span class="o">(</span>url, canvas_api, <span class="nv">headers</span><span class="o">=</span>headers<span class="o">)</span>.text
-
-print<span class="o">(</span>r<span class="o">)</span>
+<div class=" highlight hl-bash"><pre><span></span>GET https://&lt;canvas-install-url&gt;/login/oauth2/auth?client_id<span class="o">=</span>XXX<span class="p">&amp;</span><span class="nv">response_type</span><span class="o">=</span>code<span class="p">&amp;</span><span class="nv">state</span><span class="o">=</span>YYY<span class="p">&amp;</span><span class="nv">redirect_uri</span><span class="o">=</span>https://example.com/oauth2response
 </pre></div>
 
     </div>
@@ -46,8 +34,18 @@ print<span class="o">(</span>r<span class="o">)</span>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#34;status&#34;:&#34;unauthenticated&#34;,&#34;errors&#34;:[{&#34;message&#34;:&#34;user authorization required&#34;}]}
+<pre>[1] 1383
+[2] 1384
+[3] 1385
+[2]-  Done                    response_type=code
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre></pre>
 </div>
 </div>
 
