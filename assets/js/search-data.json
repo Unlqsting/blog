@@ -2,11 +2,11 @@
   
     
         "post0": {
-            "title": "Title",
-            "content": "import datetime as dt import requests #variable defining burl = &quot;http://api.openweathermap.org/data/2.5/weather?&quot; apikey = &quot;0a2c0c2e02a60e73fbad997e55285267&quot; city = &quot;San Diego&quot; #url url = burl + &quot;appid=&quot; + apikey + &quot;&amp;q=&quot; + city #response res = requests.get(url).json() print(res) . {&#39;cod&#39;: 401, &#39;message&#39;: &#39;Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.&#39;} . import calendar print(calendar.weekheader(3)) print() print(calendar.firstweekday()) print() print(calendar.month(2022,10)) print(calendar.monthcalendar(2022, 10)) print(calendar.calendar(2022)) day_of_the_week = calendar.weekday(2022,10,1) print(day_of_the_week) . import tkinter import calendar from tkinter import * from PIL import ImageTK, Image .",
-            "url": "https://unlqsting.github.io/AP-Comp-fastpages/2022/10/02/WeatherAPI.html",
-            "relUrl": "/2022/10/02/WeatherAPI.html",
-            "date": " • Oct 2, 2022"
+            "title": "PBL 'Design'",
+            "content": "Ideas for the project: . We are thinking of making a highly interactive web application that is very convinient for students. It will have calendars, clocks, reminders, and more. . Thoughts about data: . This is mostly for the backend developer. We think that we will need to store a lot of data. Types of data that we would store are: Basic user authentication and user schedule stuff. We will have the user input various forms of info about their schedule and then store it for things like reminders and what not. . Frontend: . I&#39;m in-charge of the front-end and I have already started on some of the elements needed for the website. I have already made an interactive calendar. I used HTML for making the static calendar, css to style the calendar, and javascript to turn the boring static calendar into a dynamic interactive one. .",
+            "url": "https://unlqsting.github.io/AP-Comp-fastpages/developer%20tools/college%20board/planning/2022/10/03/PBLDesign.html",
+            "relUrl": "/developer%20tools/college%20board/planning/2022/10/03/PBLDesign.html",
+            "date": " • Oct 3, 2022"
         }
         
     
