@@ -67,7 +67,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/AP-Comp-fastpages/weeks/">Weeks</a><a class="page-link" href="/AP-Comp-fastpages/API">API</a><a class="page-link" href="/AP-Comp-fastpages/blogs/">Blog Posts</a><a class="page-link" href="/AP-Comp-fastpages/calendar/">Calendar</a><a class="page-link" href="/AP-Comp-fastpages/about/">About Me</a><a class="page-link" href="/AP-Comp-fastpages/calc/">Calc BC Gotta know terms</a><a class="page-link" href="/AP-Comp-fastpages/search/">Search</a><a class="page-link" href="/AP-Comp-fastpages/categories/">Tags</a><a class="page-link" href="/AP-Comp-fastpages/vocab/">CSP Vocab</a></div>
+        <div class="trigger"><a class="page-link" href="/AP-Comp-fastpages/weeks/">Weeks</a><a class="page-link" href="/AP-Comp-fastpages/API">API</a><a class="page-link" href="/AP-Comp-fastpages/submenu/">Blog submenu</a><a class="page-link" href="/AP-Comp-fastpages/calendar/">Calendar</a><a class="page-link" href="/AP-Comp-fastpages/about/">About Me</a><a class="page-link" href="/AP-Comp-fastpages/calc/">Calc BC Gotta know terms</a><a class="page-link" href="/AP-Comp-fastpages/search/">Search</a><a class="page-link" href="/AP-Comp-fastpages/categories/">Tags</a><a class="page-link" href="/AP-Comp-fastpages/vocab/">CSP Vocab</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -145,48 +145,48 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># variable of type string</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"What is the variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection, why?"</span><span class="p">)</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">"John Doe"</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"name"</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # variable of type string</span>
+<span class="c1"># print("What is the variable name/key?", "value?", "type?", "primitive or collection, why?")</span>
+<span class="c1"># name = "John Doe"</span>
+<span class="c1"># print("name", name, type(name))</span>
 
-<span class="nb">print</span><span class="p">()</span>
+<span class="c1"># print()</span>
 
 
-<span class="c1"># variable of type integer</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"What is the variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection, why?"</span><span class="p">)</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"age"</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+<span class="c1"># # variable of type integer</span>
+<span class="c1"># print("What is the variable name/key?", "value?", "type?", "primitive or collection, why?")</span>
+<span class="c1"># age = 18</span>
+<span class="c1"># print("age", age, type(age))</span>
 
-<span class="nb">print</span><span class="p">()</span>
+<span class="c1"># print()</span>
 
-<span class="c1"># variable of type float</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"What is the variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection, why?"</span><span class="p">)</span>
-<span class="n">score</span> <span class="o">=</span> <span class="mf">90.0</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"score"</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+<span class="c1"># # variable of type float</span>
+<span class="c1"># print("What is the variable name/key?", "value?", "type?", "primitive or collection, why?")</span>
+<span class="c1"># score = 90.0</span>
+<span class="c1"># print("score", score, type(score))</span>
 
-<span class="nb">print</span><span class="p">()</span>
+<span class="c1"># print()</span>
 
-<span class="c1"># variable of type list (many values in one variable)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"What is variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection?"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"What is different about the list output?"</span><span class="p">)</span>
-<span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">,</span> <span class="s2">"Bash"</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"langs"</span><span class="p">,</span> <span class="n">langs</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">),</span> <span class="s2">"length"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">langs</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"- langs[3]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+<span class="c1"># # variable of type list (many values in one variable)</span>
+<span class="c1"># print("What is variable name/key?", "value?", "type?", "primitive or collection?")</span>
+<span class="c1"># print("What is different about the list output?")</span>
+<span class="c1"># langs = ["Python", "JavaScript", "Java", "Bash"]</span>
+<span class="c1"># print("langs", langs, type(langs), "length", len(langs))</span>
+<span class="c1"># print("- langs[3]", langs[3], type(langs[3]))</span>
 
-<span class="nb">print</span><span class="p">()</span>
+<span class="c1"># print()</span>
 
-<span class="c1"># variable of type dictionary (a group of keys and values)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"What is the variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection, why?"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"What is different about the dictionary output?"</span><span class="p">)</span>
-<span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
-    <span class="s2">"age"</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
-    <span class="s2">"score"</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
-    <span class="s2">"langs"</span><span class="p">:</span> <span class="n">langs</span>
-<span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"person"</span><span class="p">,</span> <span class="n">person</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">),</span> <span class="s2">"length"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">person</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'- person["name"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]))</span>
+<span class="c1"># # variable of type dictionary (a group of keys and values)</span>
+<span class="c1"># print("What is the variable name/key?", "value?", "type?", "primitive or collection, why?")</span>
+<span class="c1"># print("What is different about the dictionary output?")</span>
+<span class="c1"># person = {</span>
+<span class="c1">#     "name": name,</span>
+<span class="c1">#     "age": age,</span>
+<span class="c1">#     "score": score,</span>
+<span class="c1">#     "langs": langs</span>
+<span class="c1"># }</span>
+<span class="c1"># print("person", person, type(person), "length", len(person))</span>
+<span class="c1"># print('- person["name"]', person["name"], type(person["name"]))</span>
 </pre></div>
 
     </div>
@@ -234,48 +234,25 @@ person {'name': 'John Doe', 'age': 18, 'score': 90.0, 'langs': ['Python', 'JavaS
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # print function: given a dictionary of InfoDb content</span>
+<span class="c1"># #d_rec is the dictionary</span>
+<span class="c1"># #to access dictionary you use the key values and to access the List you use indexes</span>
+<span class="c1"># def print_data(d_rec):</span>
+<span class="c1">#     print(d_rec["FirstName"], d_rec["LastName"])  # using comma puts space between values</span>
+<span class="c1">#     print("\t", "Residence:", d_rec["Residence"]) # \t is a tab indent</span>
+<span class="c1">#     print("\t", "Birth Day:", d_rec["DOB"])</span>
+<span class="c1">#     print("\t", "Cars: ", end="")  # end="" make sure no return occurs</span>
+<span class="c1">#     print(", ".join(d_rec["Owns_Cars"]))  # join allows printing a string list with separator</span>
+<span class="c1">#     print()</span>
 
-<span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
 
-<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FoodName"</span><span class="p">:</span> <span class="s2">"Chocolate Genoise sponge"</span><span class="p">,</span>
-    <span class="s2">"Cuisine"</span><span class="p">:</span> <span class="s2">"German"</span><span class="p">,</span>
-    <span class="s2">"Price"</span><span class="p">:</span> <span class="s2">"$5"</span><span class="p">,</span>
-    <span class="s2">"Calories"</span><span class="p">:</span> <span class="s2">"230"</span><span class="p">,</span>
-    <span class="s2">"Ingredients"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="s2">"Milk"</span><span class="p">,</span> <span class="s2">"Cocoa Powder"</span><span class="p">,</span> <span class="s2">"Sugar"</span><span class="p">,</span> <span class="s2">"Vanilla Extract"</span><span class="p">,</span> <span class="s2">"Flour"</span><span class="p">]</span>
-<span class="p">})</span>
+<span class="c1"># # for loop algorithm iterates on length of InfoDb</span>
+<span class="c1"># def for_loop():</span>
+<span class="c1">#     print("For loop output\n")</span>
+<span class="c1">#     for record in InfoDb:</span>
+<span class="c1">#         print_data(record)</span>
 
-<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FoodName"</span><span class="p">:</span> <span class="s2">"Chocolate Genoise sponge"</span><span class="p">,</span>
-    <span class="s2">"Cuisine"</span><span class="p">:</span> <span class="s2">"German"</span><span class="p">,</span>
-    <span class="s2">"Price"</span><span class="p">:</span> <span class="s2">"$5"</span><span class="p">,</span>
-    <span class="s2">"Calories"</span><span class="p">:</span> <span class="s2">"230"</span><span class="p">,</span>
-    <span class="s2">"Ingredients"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="s2">"Milk"</span><span class="p">,</span> <span class="s2">"Cocoa Powder"</span><span class="p">,</span> <span class="s2">"Sugar"</span><span class="p">,</span> <span class="s2">"Vanilla Extract"</span><span class="p">,</span> <span class="s2">"Flour"</span><span class="p">]</span>
-<span class="p">})</span>
-
-<span class="c1">#append to List a 3rd Dictionary of key/values</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FoodName"</span><span class="p">:</span> <span class="s2">"Chocolate Genoise sponge"</span><span class="p">,</span>
-    <span class="s2">"Cuisine"</span><span class="p">:</span> <span class="s2">"German"</span><span class="p">,</span>
-    <span class="s2">"Price"</span><span class="p">:</span> <span class="s2">"$5"</span><span class="p">,</span>
-    <span class="s2">"Calories"</span><span class="p">:</span> <span class="s2">"230"</span><span class="p">,</span>
-    <span class="s2">"Ingredients"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="s2">"Milk"</span><span class="p">,</span> <span class="s2">"Cocoa Powder"</span><span class="p">,</span> <span class="s2">"Sugar"</span><span class="p">,</span> <span class="s2">"Vanilla Extract"</span><span class="p">,</span> <span class="s2">"Flour"</span><span class="p">]</span>
-<span class="p">})</span>
-
-<span class="c1">#append to List a 3rd Dictionary of key/values</span>
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FoodName"</span><span class="p">:</span> <span class="s2">"Chocolate Genoise sponge"</span><span class="p">,</span>
-    <span class="s2">"Cuisine"</span><span class="p">:</span> <span class="s2">"German"</span><span class="p">,</span>
-    <span class="s2">"Price"</span><span class="p">:</span> <span class="s2">"$5"</span><span class="p">,</span>
-    <span class="s2">"Calories"</span><span class="p">:</span> <span class="s2">"230"</span><span class="p">,</span>
-    <span class="s2">"Ingredients"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="s2">"Milk"</span><span class="p">,</span> <span class="s2">"Cocoa Powder"</span><span class="p">,</span> <span class="s2">"Sugar"</span><span class="p">,</span> <span class="s2">"Vanilla Extract"</span><span class="p">,</span> <span class="s2">"Flour"</span><span class="p">]</span>
-<span class="p">})</span>
-
-<span class="c1"># Print the data structure</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+<span class="c1"># for_loop()</span>
 </pre></div>
 
     </div>
@@ -292,10 +269,88 @@ person {'name': 'John Doe', 'age': 18, 'score': 90.0, 'langs': ['Python', 'JavaS
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">question_and_answer</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
+
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FoodName"</span><span class="p">:</span> <span class="s2">"Pancakes"</span><span class="p">,</span>
+    <span class="s2">"Price"</span><span class="p">:</span> <span class="s2">"$7"</span><span class="p">,</span>
+    <span class="s2">"Calories"</span><span class="p">:</span> <span class="s2">"730"</span><span class="p">,</span>
+    <span class="s2">"Ingredients"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="s2">"Milk"</span><span class="p">,</span> <span class="s2">"Sugar"</span><span class="p">,</span> <span class="s2">"Vanilla Extract"</span><span class="p">,</span> <span class="s2">"Flour"</span><span class="p">,</span> <span class="s2">"Butter Milk"</span><span class="p">,</span> <span class="s2">"Baking soda"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FoodName"</span><span class="p">:</span> <span class="s2">"Vanilla sponge"</span><span class="p">,</span>
+    <span class="s2">"Price"</span><span class="p">:</span> <span class="s2">"$3"</span><span class="p">,</span>
+    <span class="s2">"Calories"</span><span class="p">:</span> <span class="s2">"180"</span><span class="p">,</span>
+    <span class="s2">"Ingredients"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="s2">"Milk"</span><span class="p">,</span> <span class="s2">"Sugar"</span><span class="p">,</span> <span class="s2">"Vanilla Extract"</span><span class="p">,</span> <span class="s2">"Flour"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1">#append to List a 3rd Dictionary of key/values</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FoodName"</span><span class="p">:</span> <span class="s2">"French Toast"</span><span class="p">,</span>
+    <span class="s2">"Price"</span><span class="p">:</span> <span class="s2">"$6"</span><span class="p">,</span>
+    <span class="s2">"Calories"</span><span class="p">:</span> <span class="s2">"310"</span><span class="p">,</span>
+    <span class="s2">"Ingredients"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="s2">"Milk"</span><span class="p">,</span> <span class="s2">"Cinnamon"</span><span class="p">,</span> <span class="s2">"Sugar"</span><span class="p">,</span> <span class="s2">"Vanilla Extract"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1">#append to List a 3rd Dictionary of key/values</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FoodName"</span><span class="p">:</span> <span class="s2">"Chocolate cake"</span><span class="p">,</span>
+    <span class="s2">"Price"</span><span class="p">:</span> <span class="s2">"$5"</span><span class="p">,</span>
+    <span class="s2">"Calories"</span><span class="p">:</span> <span class="s2">"230"</span><span class="p">,</span>
+    <span class="s2">"Ingredients"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Eggs"</span><span class="p">,</span> <span class="s2">"Milk"</span><span class="p">,</span> <span class="s2">"Cocoa Powder"</span><span class="p">,</span> <span class="s2">"Sugar"</span><span class="p">,</span> <span class="s2">"Vanilla Extract"</span><span class="p">,</span> <span class="s2">"Flour"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Print the data structure</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'FoodName': 'Pancakes', 'Price': '$7', 'Calories': '730', 'Ingredients': ['Eggs', 'Milk', 'Sugar', 'Vanilla Extract', 'Flour', 'Butter Milk', 'Baking soda']}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">price</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">"Price"</span><span class="p">]</span>
+<span class="n">calories</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">"Calories"</span><span class="p">]</span>
+<span class="n">ingredients</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">"Ingredients"</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">question_and_answer</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Answer: "</span> <span class="o">+</span> <span class="n">msg</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Calories:"</span> <span class="o">+</span> <span class="n">calories</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ingredients</span><span class="p">)</span>
 
 <span class="n">question_and_answer</span><span class="p">(</span><span class="s2">"Please write your preference below:"</span><span class="p">)</span>
 </pre></div>
@@ -304,60 +359,24 @@ person {'name': 'John Doe', 'age': 18, 'score': 90.0, 'langs': ['Python', 'JavaS
 </div>
 </div>
 
-</div>
-    
+<div class="output_wrapper">
+<div class="output">
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="output_area">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">msg</span>
-</pre></div>
-
-    </div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Question: Please write your preference below:
+Answer: Pancakes
+ 
+$7
+ 
+Calories:730
+ 
+['Eggs', 'Milk', 'Sugar', 'Vanilla Extract', 'Flour', 'Butter Milk', 'Baking soda']
+</pre>
 </div>
 </div>
 
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># print function: given a dictionary of InfoDb content</span>
-<span class="c1">#d_rec is the dictionary</span>
-<span class="c1">#to access dictionary you use the key values and to access the List you use indexes</span>
-<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> <span class="c1"># \t is a tab indent</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Cars: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>  <span class="c1"># end="" make sure no return occurs</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Owns_Cars"</span><span class="p">]))</span>  <span class="c1"># join allows printing a string list with separator</span>
-    <span class="nb">print</span><span class="p">()</span>
-
-
-<span class="c1"># for loop algorithm iterates on length of InfoDb</span>
-<span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"For loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
-        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
-
-<span class="n">for_loop</span><span class="p">()</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
