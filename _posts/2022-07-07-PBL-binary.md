@@ -42,29 +42,114 @@ type: pbl
             </table>
         </div>
         <div class="col-12">
-            {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
-            {% assign bits = BITS | minus: 1 %} 
             <table class="table">
             <tr>
-                {% comment %}Build many bits{% endcomment %}
-                {% for i in (0..bits) %}
-                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
-                    <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
+                <td><img class="img-responsive py-3" id="bulb0" src="/blog/images/bulb_off.png" alt="" width="40" height="Auto" />
+                    <button type="button" id="butt0" onclick="javascript:toggleBit(0)">Turn on</button>
+                <figcaption value="4" class="text labels" id="label1" >Decimal bit value: 4</figcaption>
                 </td>
-                {% endfor %}
+                <!--  -->
+                <td><img class="img-responsive py-3" id="bulb1" src="/blog/images/bulb_off.png" alt="" width="40" height="Auto" />
+                    <button type="button" id="butt1" onclick="javascript:toggleBit(1)">Turn on</button>
+                <figcaption value="2" class="text labels" id="label1" >Decimal bit value: 2</figcaption>
+                </td>
+                <!--  -->
+                <td><img class="img-responsive py-3" id="bulb2" src="/blog/images/bulb_off.png" alt="" width="40" height="Auto" />
+                    <button type="button" id="butt2" onclick="javascript:toggleBit(2)">Turn on</button>
+                <figcaption value="1" class="text labels" id="label1" >Decimal bit value: 1</figcaption>
+                </td>
+                <td>
+                </td>
+                <!--  -->
             </tr>
             <tr>
-                {% comment %}Value of bit{% endcomment %}
-                {% for i in (0..bits) %}
-                <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
-                {% endfor %}
+                <td><input type="text" id="digit0" value="Binary bit value: 0" size="15" readonly="" /></td>
+                <td><input type="text" id="digit1" value="Binary bit value: 0" size="15" readonly="" /></td>
+                <td><input type="text" id="digit2" value="Binary bit value: 0" size="15" readonly="" /></td> 
             </tr>
             </table>
         </div>
     </div>
+    <div id="bitnumber">
+    </div>
+    <div class="convertcontainer">
+        <h2>Decimal to Binary converter</h2>
+        <div class="inputcontainer">
+            <div class="inputs">
+                <label for="decimalinp">Decimal:</label>
+                <input type="number" id="decimalinp" />
+                <label for="bininp">Binary:</label>
+                <input type="number" id="bininp" /> 
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
+<style>
+    #bitnumber {
+        width: 450px;
+        height: 200px;
+        color: bisque;
+        background-color: black;
+        display: flex;
+        font-size: 60px;
+        justify-content: center;
+        padding: 5px;
+    }
+    .convertcontainer {
+        background-color: black;
+        width: 300px;
+        padding: 5px 4px;
+        border-radius: 3px;
+        box-shadow: 0px 2px 2px rgba(0,21,33,0.18);
+        display: flex;
+        position: absolute;
+        transform: translateX(550px);
+        float: right;
+        top: 50%;
+        bottom: 25%;
+        height: 200px;
+    }
+    h2 {
+        font-size: 20px;
+        color: bisque;
+        text-align: center;
+        font-weight: 500;
+    }
+    .inputcontainer {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        position: absolute;
+        transform: translateY(75px);
+    }
+    input {
+        position: relative;
+        font-size: 15px;
+        width: 100%;
+        padding: 2px;
+        border-radius: 3px;
+        outline: none;
+    }
+</style>
+
 <script>
+    
+    //script for binary converter:
+        let decimalinp = document.getElementById("decimalinp");
+
+        let bininp = document.getElementById("bininp");
+
+        //converting decimal to binary with user input
+            decimalinp.addEventListener("input", () => {
+                let decimalval = parseInt(decimalinp.value);
+                //decimalval converts decimal to binary
+
+                bininp.value = decimalval.toString(2);
+            });
+    //
+    
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
     const MSG_ON = "Turn on";
@@ -89,6 +174,8 @@ type: pbl
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        //
+        document.getElementById('bitnumber').innerText = "Decimal number: " + parseInt(binary, 2).toString();
     }
     //
     function decimal_2_base(decimal, base) {
