@@ -107,7 +107,7 @@ type: pbl
         position: absolute;
         transform: translateX(550px);
         float: right;
-        top: 50%;
+        top: 69%;
         bottom: 25%;
         height: 200px;
     }
