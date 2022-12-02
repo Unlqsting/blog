@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lesson 2 notes and hacks | Do you even blog?</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Lesson 2 notes and hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A blogging site for AP Computer Science" />
+<meta property="og:description" content="A blogging site for AP Computer Science" />
+<link rel="canonical" href="https://unlqsting.github.io/blog/lesson/notes/hacks/2022/11/29/lesson2.html" />
+<meta property="og:url" content="https://unlqsting.github.io/blog/lesson/notes/hacks/2022/11/29/lesson2.html" />
+<meta property="og:site_name" content="Do you even blog?" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-29T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lesson 2 notes and hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-29T00:00:00-06:00","datePublished":"2022-11-29T00:00:00-06:00","description":"A blogging site for AP Computer Science","headline":"Lesson 2 notes and hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://unlqsting.github.io/blog/lesson/notes/hacks/2022/11/29/lesson2.html"},"url":"https://unlqsting.github.io/blog/lesson/notes/hacks/2022/11/29/lesson2.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://unlqsting.github.io/blog/feed.xml" title="Do you even blog?" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /><script src="https://hypothes.is/embed.js" async></script>
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Do you even blog?</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/weeks/">Weeks</a><a class="page-link" href="/blog/API">API</a><a class="page-link" href="/blog/submenu/">Blog submenu</a><a class="page-link" href="/blog/calendar/">Calendar</a><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/calc/">Calc BC Gotta know terms</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a><a class="page-link" href="/blog/vocab/">CSP Vocab</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Lesson 2 notes and hacks</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-29T00:00:00-06:00" itemprop="datePublished">
+        Nov 29, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#lesson">lesson</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#notes">notes</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#hacks">hacks</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Unlqsting/blog/tree/master/_notebooks/2022-11-29-lesson2.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Unlqsting/blog/master?filepath=_notebooks%2F2022-11-29-lesson2.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Unlqsting/blog/blob/master/_notebooks/2022-11-29-lesson2.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FUnlqsting%2Fblog%2Fblob%2Fmaster%2F_notebooks%2F2022-11-29-lesson2.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/blog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Notes:">Notes: </a></li>
+<li class="toc-entry toc-h1"><a href="#How-I-aided-my-understanding:">How I aided my understanding: </a></li>
+<li class="toc-entry toc-h1"><a href="#Solution:">Solution: </a></li>
+<li class="toc-entry toc-h1"><a href="#Change-the-variables-in-the-first-section,-so-that-each-if-statement-resolves-as-True.">Change the variables in the first section, so that each if statement resolves as True. </a></li>
+<li class="toc-entry toc-h1"><a href="#solution:">solution: </a></li>
+<li class="toc-entry toc-h1"><a href="#Hacks-1:">Hacks 1: </a></li>
+<li class="toc-entry toc-h1"><a href="#Hacks-2:">Hacks 2: </a></li>
+<li class="toc-entry toc-h1"><a href="#Hacks-3:">Hacks 3: </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-11-29-lesson2.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Notes:">
+<a class="anchor" href="#Notes:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes:<a class="anchor-link" href="#Notes:"> </a>
+</h1>
+<p>Algorithms:</p>
+<ul>
+<li>set of instructions that are made to accomplish a task or produce a solution. Algorithms have three parts:<ol>
+<li>Sequencing</li>
+<li>Selection</li>
+<li>Iteration</li>
+</ol>
+</li>
+</ul>
+<p>Sequencing:</p>
+<ul>
+<li>Order of how to do something to get a result. Ex: how a student would follow the instructions from a teacher</li>
+</ul>
+<p>Selection:</p>
+<ul>
+<li>allows an algorithm to make a decision based on a condition. Often the decision is true or false</li>
+</ul>
+<p>Iteration:</p>
+<ul>
+<li>is a loop. When you iterate, the code keeps repeating until a condition (set by the programmer) is met</li>
+</ul>
+<p>Mathematical Expressions:</p>
+<ul>
+<li>sequential statements:<ul>
+<li>set of statements that are executed one after another (in a sequence)</li>
+</ul>
+</li>
+<li>Add: x+y </li>
+<li>Subtract: x-y </li>
+<li>Multiply: x*y </li>
+<li>Div: x/y </li>
+<li>Mod: x % y (x and y can be string or number)</li>
+</ul>
+<p>Strings:</p>
+<ul>
+<li>concatenation: Joins two strings together</li>
+<li>substring: part of an already existing string </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-I-aided-my-understanding:">
+<a class="anchor" href="#How-I-aided-my-understanding:" aria-hidden="true"><span class="octicon octicon-link"></span></a>How I aided my understanding:<a class="anchor-link" href="#How-I-aided-my-understanding:"> </a>
+</h1>
+<p>When the lesson was taught, it didn't really make sense to me. Because of this, I had only improved my understanding of the topics by a tiny amount. I went to learnpython.org and worked through their lessons on related material and then completed their exercise. Here are some of the online problems I used to practice.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"Hey there! what should this string be?"</span>
+<span class="c1"># Length should be 20</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Length of s = </span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+
+<span class="c1"># First occurrence of "a" should be at index 8</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The first occurrence of the letter a = </span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">"a"</span><span class="p">))</span>
+
+<span class="c1"># Number of a's should be 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"a occurs </span><span class="si">%d</span><span class="s2"> times"</span> <span class="o">%</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">"a"</span><span class="p">))</span>
+
+<span class="c1"># Slicing the string into bits</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The first five characters are '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span> <span class="n">s</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># Start to 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The next five characters are '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span> <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span> <span class="c1"># 5 to 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The thirteenth character is '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span> <span class="n">s</span><span class="p">[</span><span class="mi">12</span><span class="p">])</span> <span class="c1"># Just number 12</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The characters with odd index are '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span><span class="k">s</span>[1::2]) #(0-based indexing)
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The last five characters are '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:])</span> <span class="c1"># 5th-from-last to end</span>
+
+<span class="c1"># Convert everything to uppercase</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"String in uppercase: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Solution:">
+<a class="anchor" href="#Solution:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solution:<a class="anchor-link" href="#Solution:"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"I like pancakes with"</span>
+<span class="c1"># Length should be 20</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Length of s = </span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+
+<span class="c1"># First occurrence of "a" should be at index 8</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The first occurrence of the letter a = </span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">"a"</span><span class="p">))</span>
+
+<span class="c1"># Number of a's should be 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"a occurs </span><span class="si">%d</span><span class="s2"> times"</span> <span class="o">%</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">"a"</span><span class="p">))</span>
+
+<span class="c1"># Slicing the string into bits</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The first five characters are '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span> <span class="n">s</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># Start to 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The next five characters are '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span> <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span> <span class="c1"># 5 to 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The thirteenth character is '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span> <span class="n">s</span><span class="p">[</span><span class="mi">12</span><span class="p">])</span> <span class="c1"># Just number 12</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The characters with odd index are '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span><span class="k">s</span>[1::2]) #(0-based indexing)
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The last five characters are '</span><span class="si">%s</span><span class="s2">'"</span> <span class="o">%</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:])</span> <span class="c1"># 5th-from-last to end</span>
+
+<span class="c1"># Convert everything to uppercase</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"String in uppercase: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Length of s = 20
+The first occurrence of the letter a = 8
+a occurs 2 times
+The first five characters are 'I lik'
+The next five characters are 'e pan'
+The thirteenth character is 'k'
+The characters with odd index are ' iepnae ih'
+The last five characters are ' with'
+String in uppercase: I LIKE PANCAKES WITH
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Change-the-variables-in-the-first-section,-so-that-each-if-statement-resolves-as-True.">
+<a class="anchor" href="#Change-the-variables-in-the-first-section,-so-that-each-if-statement-resolves-as-True." aria-hidden="true"><span class="octicon octicon-link"></span></a>Change the variables in the first section, so that each if statement resolves as True.<a class="anchor-link" href="#Change-the-variables-in-the-first-section,-so-that-each-if-statement-resolves-as-True."> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">second_number</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">first_array</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">second_array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"1"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">first_array</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"2"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">second_array</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"3"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">first_array</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">second_array</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"4"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">first_array</span> <span class="ow">and</span> <span class="n">first_array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"5"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">second_number</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"6"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="solution:">
+<a class="anchor" href="#solution:" aria-hidden="true"><span class="octicon octicon-link"></span></a>solution:<a class="anchor-link" href="#solution:"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">second_number</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">first_array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">second_array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"1"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">first_array</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"2"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">second_array</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"3"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">first_array</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">second_array</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"4"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">first_array</span> <span class="ow">and</span> <span class="n">first_array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"5"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">second_number</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"6"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks-1:">
+<a class="anchor" href="#Hacks-1:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks 1:<a class="anchor-link" href="#Hacks-1:"> </a>
+</h1>
+<ol>
+<li>don't know what you're asking for</li>
+<li>sequence: There are no conditions or decisions to be made. Therefore, it has to be a sequence</li>
+<li>selection: The condition is if number = item and the decision is display or do nothing. Therefore it has to be a selection.</li>
+<li>iteration: the code scans for more numbers and if the code finds the command to be true, it loops until the code finds no more numbers. Therefore, this has to be an iteration.</li>
+<li>sequence: There are no conditions or decisions to be made. Therefore, it has to be a sequence</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks-2:">
+<a class="anchor" href="#Hacks-2:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks 2:<a class="anchor-link" href="#Hacks-2:"> </a>
+</h1>
+<p>calculate and display average of 25, 32, 42:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">42</span><span class="p">]</span>
+
+<span class="n">list_ave</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">list_ave</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>33.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks-3:">
+<a class="anchor" href="#Hacks-3:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks 3:<a class="anchor-link" href="#Hacks-3:"> </a>
+</h1>
+<p>Crossword:</p>
+<ul>
+<li>3 across - sequence</li>
+<li>1 down - iteration</li>
+<li>2 down - selection</li>
+</ul>
+<p>Evaluate the code</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">*</span> <span class="mi">3</span> 
+<span class="n">num3</span> <span class="o">=</span> <span class="n">num2</span> <span class="o">/</span> <span class="n">num1</span> <span class="o">*</span> <span class="p">(</span><span class="mi">9</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">num3</span> <span class="o">%</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)</span> <span class="o">%</span> <span class="n">num3</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Unlqsting/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/lesson/notes/hacks/2022/11/29/lesson2.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blogging site for AP Computer Science</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
