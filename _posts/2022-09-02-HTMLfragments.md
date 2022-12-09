@@ -5,7 +5,7 @@ title: HTML fragments
 toc: true
 badges: true 
 comments: true 
-categories: [html, darkmode, webpage] 
+categories: [tri1] 
 image: images/html.png
 nb_path: _notebooks/2022-09-02-HTMLfragments.ipynb
 layout: notebook

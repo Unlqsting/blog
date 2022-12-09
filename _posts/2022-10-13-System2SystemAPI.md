@@ -5,7 +5,7 @@ title: Systems
 toc: true
 badges: true 
 comments: true 
-categories: [planning]
+categories: [tri1]
 nb_path: _notebooks/2022-10-13-System2SystemAPI.ipynb
 layout: notebook
 ---
