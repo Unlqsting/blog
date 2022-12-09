@@ -147,8 +147,8 @@
         ,"post13": {
             "title": "Teaching plan for Units 1-2",
             "content": "How will we teach? . Our group will have a jupyter notebook that students can use to follow along Our main form of passing information will be through slides . More details about our slides . - the process will go: - we present the information on the slides - then students will be asked to mess around with the code for practice - we plan on having around 20 slides and divide the amount of slides by the amount of people we have - we plan on having two sub-sections for unit 3 sections 1 - three sub-sections for unit 3 section 2 . Unit 3 section 1 sub-sections: . Sub-section 1: . - we will have three slides for this sub-section - these slides will explain: how variables are abstractions that can be used to represent and store data how to use variables to store data as numbers, Booleans, lists, and strings. . Sub-section 2: . - we will have three slides for this sub-section: - these slides will explain: - how you can change the value stored in an variable using the assignment operator . Unit 3 section 2 sub-sections: . Sub-section 1: . - we will have three slides for this sub-section: - These slides will explain: - how lists and string are examples of data abstraction . Sub-section 2: . - we will have three slides for this sub-section: - These slides will explain: - how to use lists as an abstraction to manage the complexity of a program - go over the lists section of the CB AP CSP exam reference sheet . Sub-section 3: . - we will have three slides for this sub-section: - These slides will look at: - examples of programs with lists - how these programs are optimized for least complexity . Organization of our group: . Since there are 5 sub-sections we will be going over and there are five people in our group, we will have each person doing one section . - modifications can be made if necessary .",
-            "url": "https://unlqsting.github.io/blog/lesson(tri2)/tri2/2022/11/16/teachingplan.html",
-            "relUrl": "/lesson(tri2)/tri2/2022/11/16/teachingplan.html",
+            "url": "https://unlqsting.github.io/blog/lesson(tri2)/2022/11/16/teachingplan.html",
+            "relUrl": "/lesson(tri2)/2022/11/16/teachingplan.html",
             "date": " • Nov 16, 2022"
         }
         
@@ -180,8 +180,8 @@
         ,"post16": {
             "title": "Binary logic lesson",
             "content": "Binary logic notes: . Computers only understand 0&#39;s and 1&#39;s . 000 --&gt; 0 001 --&gt; 1 - Since the computer doesn&#39;t have a 2, it must use a different combination ( a pattern) 010 --&gt; 2 . how did these patterns come to be? . # # # # # # # # 128 64 32 16 4 2 1 - ex: 111 = 7 4(1) + 2(1) + 1(1) = 7 . how do we find an odd number in binary? . - only way to find an odd number in binary is to... Look at the first place in the binary layout .",
-            "url": "https://unlqsting.github.io/blog/lesson(tri2)/notes/tri2/2022/11/15/Binarylogic.html",
-            "relUrl": "/lesson(tri2)/notes/tri2/2022/11/15/Binarylogic.html",
+            "url": "https://unlqsting.github.io/blog/lesson(tri2)/notes(tri2)/2022/11/15/Binarylogic.html",
+            "relUrl": "/lesson(tri2)/notes(tri2)/2022/11/15/Binarylogic.html",
             "date": " • Nov 15, 2022"
         }
         
@@ -213,8 +213,8 @@
         ,"post19": {
             "title": "Scheduler progress check",
             "content": "We started out with a simple model of a calendar. We then upgraded its looks and functionality by making it bigger, adding theme colors, and integrating events. We also made this a month focused calendar. We then made a weather app next to our calendar for our desired purpose of convinience. It has full weather display functionality using city name as a parameter. During the last stages of our project, we made the events be able to display. For a more detailed progress report, check our scrum board. .",
-            "url": "https://unlqsting.github.io/blog/planning/progress/pbl/2022/11/03/SchedulerProgress.html",
-            "relUrl": "/planning/progress/pbl/2022/11/03/SchedulerProgress.html",
+            "url": "https://unlqsting.github.io/blog/tri1/2022/11/03/SchedulerProgress.html",
+            "relUrl": "/tri1/2022/11/03/SchedulerProgress.html",
             "date": " • Nov 3, 2022"
         }
         
@@ -224,8 +224,8 @@
         ,"post20": {
             "title": "Systems",
             "content": "Responses: . the front-end will be doing the physical element: Calendar, Clock, filter elements, and etc.. . | the back-end will be working with the api&#39;s that go along this project and also predominantly work with making a user authentication system . | we will have the Scrum Master join the frontend and help with some of the coding behind the layout of the website . | the backend will have the devops help out with specific python coding | .",
-            "url": "https://unlqsting.github.io/blog/planning/2022/10/13/System2SystemAPI.html",
-            "relUrl": "/planning/2022/10/13/System2SystemAPI.html",
+            "url": "https://unlqsting.github.io/blog/tri1/2022/10/13/System2SystemAPI.html",
+            "relUrl": "/tri1/2022/10/13/System2SystemAPI.html",
             "date": " • Oct 13, 2022"
         }
         
@@ -235,8 +235,8 @@
         ,"post21": {
             "title": "College Board Error testing",
             "content": "menu = {&quot;burger&quot;: 3.99, &quot;fries&quot;: 1.99, &quot;drink&quot;: 0.99} total = 0 #shows the user the menu and prompts them to select an item print(&quot;Menu&quot;) for k,v in menu.items(): print(k + &quot; $&quot; + str(v)) #why does v have &quot;str&quot; in front of it? #ideally the code should prompt the user multiple times item = input(&quot;Please select an item from the menu&quot;) #code should add the price of the menu items selected by the user print(&quot;Your total:&quot; + &quot; &quot; + str(total) + str(menu.get(item))) total = menu.get(item) #shows the user the menu and prompts them to select an item print(&quot;Anything else?&quot;) for k,v in menu.items(): print(k + &quot; $&quot; + str(v)) #why does v have &quot;str&quot; in front of it? #ideally the code should prompt the user multiple times item = input(&quot;Please select an item from the menu&quot;) if item == &quot;no&quot;: print(&quot;Thanks for ordering!&quot;) print(&quot;Your total:&quot; + &quot; &quot; + str(total)) else: print(&quot;Your total:&quot; + &quot; &quot; + str(total) + str(menu.get(item))) total = total + menu.get(item) while(True): print(&quot;Menu&quot;) for k,v in menu.items(): print(k + &quot; $&quot; + str(v)) #why does v have &quot;str&quot; in front of it? #ideally the code should prompt the user multiple times item = input(&quot;Please select an item from the menu. If you wish to exit, type no&quot;) if item == &quot;no&quot;: print(&quot;Thanks for ordering!&quot;) print(&quot;Your total:&quot; + &quot; &quot; + str(total)) break else: print(&quot;Your total:&quot; + &quot; &quot; + str(total) + str(menu.get(item))) total = total + menu.get(item) . Menu burger $3.99 fries $1.99 drink $0.99 Your total: 03.99 Anything else? burger $3.99 fries $1.99 drink $0.99 Your total: 3.991.99 Menu burger $3.99 fries $1.99 drink $0.99 Your total: 5.980.99 Menu burger $3.99 fries $1.99 drink $0.99 Your total: 6.970000000000001None . TypeError Traceback (most recent call last) /home/unlqsting_x/vscode/AP-Comp-fastpages/_notebooks/Menu.ipynb Cell 2 in &lt;cell line: 35&gt;() &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/unlqsting_x/vscode/AP-Comp-fastpages/_notebooks/Menu.ipynb#W1sdnNjb2RlLXJlbW90ZQ%3D%3D?line=45&#39;&gt;46&lt;/a&gt; else: &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/unlqsting_x/vscode/AP-Comp-fastpages/_notebooks/Menu.ipynb#W1sdnNjb2RlLXJlbW90ZQ%3D%3D?line=46&#39;&gt;47&lt;/a&gt; print(&#34;Your total:&#34; + &#34; &#34; + str(total) + str(menu.get(item))) &gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/unlqsting_x/vscode/AP-Comp-fastpages/_notebooks/Menu.ipynb#W1sdnNjb2RlLXJlbW90ZQ%3D%3D?line=47&#39;&gt;48&lt;/a&gt; total = total + menu.get(item) TypeError: unsupported operand type(s) for +: &#39;float&#39; and &#39;NoneType&#39; . What errors may arise in your project? . I think some of the most common errors that will arise in our project are miscommunication, syntax-based, OAuth errors, and logic based errors. . What are some test cases that can be used? . Each of us can individually review the code that has the error. This way, if an error appears or an not-intended value appears, we can switch between who reviews the code. . Make sure to document any bugs you encounter and how you solved the problem . Yes, we will document it on the Scrum Board. . What are &#8220;single&#8221; tests that you will perform on your project? Or, your part of the project? . My job is regarding the elements of our project. I need to make sure the elements work as intended, and to do this I will not only have some of my friends test it, but also personally test common and uncommon inputs. .",
-            "url": "https://unlqsting.github.io/blog/python/errortesting/collegeboard/2022/10/12/Menu.html",
-            "relUrl": "/python/errortesting/collegeboard/2022/10/12/Menu.html",
+            "url": "https://unlqsting.github.io/blog/tri1/2022/10/12/Menu.html",
+            "relUrl": "/tri1/2022/10/12/Menu.html",
             "date": " • Oct 12, 2022"
         }
         
@@ -301,8 +301,8 @@
         ,"post27": {
             "title": "UI Starters",
             "content": "personal flask changes . index.html change: click here stub.html change: click here I am having trouble loading my flask, so I am unable to show you. If you remember, I did make changes to the index html and stub . fastpages project changes: . Submenu link: click here . team project changes: . Link to the program purpose: click here . Roles within our group: frontend: Noor B. Backend: Alan L. Scrum master: Steven Z. DevOps: Ederick W. . Work flow: . Made scrum board | added PBL vocab on fastpages | . Collegeboard criteria requirements: . Row 1: Program Purpose and Function Our program’s purpose is to provide an automated organizer for students’ tasks. The function is to utilize a calendar and allow students to add, remove, and edit events on each day. Students will also be able to sign in with their own account in order to save their events. Row 2: Data Abstraction The data will be a list which includes a students’ events. As a student adds, removes, or edits an event, the list will change. The name of the variable representing the list will be calendarEvent, or some variable related to events on a calendar. Row 3: Managing Complexity We can manage the complexity by creating a new list specific to each user. Then, we can create a list of all the users, making the entire project easy to manage. Row 4: Procedural Abstraction My student-developed procedure is to make the login screen for the website. I will also help to log all of the information entered by the users when they first use the scheduler. Row 5: Algorithm Implementation While we have not started on the project yet, our plan is to make a list inside of a list, etc. The list can be appended by using a while loop. Row 6: Testing After making slight changes, I will test the code by using a local server. I will do it very often in order to make sure that everything is working before I move onto a new task. .",
-            "url": "https://unlqsting.github.io/blog/ui/flask/pbl/html/2022/09/20/uistarters.html",
-            "relUrl": "/ui/flask/pbl/html/2022/09/20/uistarters.html",
+            "url": "https://unlqsting.github.io/blog/tri1/2022/09/20/uistarters.html",
+            "relUrl": "/tri1/2022/09/20/uistarters.html",
             "date": " • Sep 20, 2022"
         }
         
@@ -334,8 +334,8 @@
         ,"post30": {
             "title": "HTML fragments",
             "content": "theme change: . I noticed that there are many errors with fastpages itself. The whole page breaks down when I change the theme to something other than minima . darkmode implementation: . tagging: . I tag all my items in the categories section when I first make a jupyter notebook. This allows me to be more efficient when searching for blog posts . search: . I have my fastpages set up so that I am able to input a keyword and search for things on the blog. This allows me to be even more efficient while searching for an object on my fastpages. .",
-            "url": "https://unlqsting.github.io/blog/html/darkmode/webpage/2022/09/02/HTMLfragments.html",
-            "relUrl": "/html/darkmode/webpage/2022/09/02/HTMLfragments.html",
+            "url": "https://unlqsting.github.io/blog/tri1/2022/09/02/HTMLfragments.html",
+            "relUrl": "/tri1/2022/09/02/HTMLfragments.html",
             "date": " • Sep 2, 2022"
         }
         
