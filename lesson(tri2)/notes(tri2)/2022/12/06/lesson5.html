@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      3 min read
     
 </span></p>
 
@@ -128,7 +128,6 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#Hacks-1:">Hacks 1: </a></li>
-<li class="toc-entry toc-h1"><a href="#How-I-aided-my-learning-in-nested-conditionals.">How I aided my learning in nested conditionals. </a></li>
 <li class="toc-entry toc-h1"><a href="#Hacks-3:">Hacks 3: </a></li>
 <li class="toc-entry toc-h1"><a href="#Hacks-4:">Hacks 4: </a></li>
 </ul><!--
@@ -275,11 +274,38 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-I-aided-my-learning-in-nested-conditionals.">
-<a class="anchor" href="#How-I-aided-my-learning-in-nested-conditionals." aria-hidden="true"><span class="octicon octicon-link"></span></a>How I aided my learning in nested conditionals.<a class="anchor-link" href="#How-I-aided-my-learning-in-nested-conditionals."> </a>
+<h1 id="Hacks-3:">
+<a class="anchor" href="#Hacks-3:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks 3:<a class="anchor-link" href="#Hacks-3:"> </a>
 </h1>
-<p>I was confused on what the directions meant by converting nested conditionals to boolean. I thought that the nested conditionals are simple enough already, but I had some doubt. I searched up on youtube and learned that nested conditionals get messy really quick if you're writing an advanced piece of code. 
-For example: Say you want to access the wifi router and make some changes. To access this though, you need to login. After you logged in, you need to be an admin inorder to make changes. Complicated way would be with nested conditionals:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>check if user wants to access wifi <ol>
+<li>if no, then break</li>
+</ol>
+</li>
+<li>if true, then check if the user is logged in<ol>
+<li>if user is not logged in, break</li>
+</ol>
+</li>
+<li>if true, check if user is an admin or not<ol>
+<li>if user is not logged in, break</li>
+</ol>
+</li>
+<li>if yes, then authorize user to make changes</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://drive.google.com/file/d/1cqG1d43IiWRMYx29F0oEY9FbGdUB_Cpq/view?usp=share_link" alt=""></p>
 
 </div>
 </div>
@@ -301,58 +327,6 @@ For example: Say you want to access the wifi router and make some changes. To ac
         <span class="nb">print</span><span class="p">(</span><span class="s2">"you need to log in to access the wifi router"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s2">"don't want to access the router? ok."</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">access_wifi</span><span class="p">,</span> <span class="n">loggedIn</span><span class="p">,</span> <span class="n">admin</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"don't want to access the router? ok."</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"you have accessed your wifi router and are able to make changes"</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Hacks-3:">
-<a class="anchor" href="#Hacks-3:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks 3:<a class="anchor-link" href="#Hacks-3:"> </a>
-</h1>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">graph</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"a"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
-    <span class="s2">"b"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
-    <span class="s2">"c"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
-    <span class="s2">"d"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"c"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
-    <span class="s2">"e"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span>
-<span class="p">}</span>
 </pre></div>
 
     </div>
