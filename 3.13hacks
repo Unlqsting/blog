@@ -4,21 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Python kernel test | Do you even blog?</title>
+<title>3.13 hacks | Do you even blog?</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Python kernel test" />
+<meta property="og:title" content="3.13 hacks" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A blogging site for AP Computer Science" />
 <meta property="og:description" content="A blogging site for AP Computer Science" />
-<link rel="canonical" href="https://unlqsting.github.io/blog/hacks(tri2)/2022/11/18/pykernel.html" />
-<meta property="og:url" content="https://unlqsting.github.io/blog/hacks(tri2)/2022/11/18/pykernel.html" />
+<link rel="canonical" href="https://unlqsting.github.io/blog/3.13hacks" />
+<meta property="og:url" content="https://unlqsting.github.io/blog/3.13hacks" />
 <meta property="og:site_name" content="Do you even blog?" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-18T00:00:00-06:00" />
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Python kernel test" />
+<meta property="twitter:title" content="3.13 hacks" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-18T00:00:00-06:00","datePublished":"2022-11-18T00:00:00-06:00","description":"A blogging site for AP Computer Science","headline":"Python kernel test","mainEntityOfPage":{"@type":"WebPage","@id":"https://unlqsting.github.io/blog/hacks(tri2)/2022/11/18/pykernel.html"},"url":"https://unlqsting.github.io/blog/hacks(tri2)/2022/11/18/pykernel.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"A blogging site for AP Computer Science","headline":"3.13 hacks","url":"https://unlqsting.github.io/blog/3.13hacks"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://unlqsting.github.io/blog/feed.xml" title="Do you even blog?" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /><script src="https://hypothes.is/embed.js" async></script>
@@ -70,115 +69,96 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+        <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.13 hacks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Python kernel test</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-18T00:00:00-06:00" itemprop="datePublished">
-        Nov 18, 2022
-      </time>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      1 min read
-    
-</span></p>
+<body>
+    <div class="container">
+        <div class="functioncontainer">
+            <!-- <label for="addnum1">Addition</label> -->
+            <input type="number" id="num1" placeholder="Number 1">
+            
+            <input type="number" id="num2" placeholder="Number 2">
 
-    
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/blog/categories/#hacks(tri2)">hacks(tri2)</a>
-        
-      
-      </p>
-    
+            <button id="add" >+</button>
+            <button id="sub" >-</button>
+            <button id="div" >/</button>
+            <button id="mul" >x</button>
 
-    
-      
-        <div class="pb-5 d-flex flex-justify-center">
-          <div class="px-2">
-
-    <a href="https://github.com/Unlqsting/blog/tree/master/_notebooks/2022-11-18-pykernel.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/Unlqsting/blog/master?filepath=_notebooks%2F2022-11-18-pykernel.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://colab.research.google.com/github/Unlqsting/blog/blob/master/_notebooks/2022-11-18-pykernel.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
-    </a>
-</div>
-          <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FUnlqsting%2Fblog%2Fblob%2Fmaster%2F_notebooks%2F2022-11-18-pykernel.ipynb" target="_blank">
-      <img class="notebook-badge-image" src="/blog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
-  </a>
-</div>
-
+            <input id ="res" type="number" readonly placeholder="result">
+            
         </div>
-      </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    <ul id="toc" class="section-nav">
-</ul><!--
-#################################################
-### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
-#################################################
-# file to edit: _notebooks/2022-11-18-pykernel.ipynb
--->
-
-<div class="container" id="notebook-container">
-        
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"my python kernel works"</span><span class="p">)</span>
-</pre></div>
 
     </div>
-</div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
+    <style>
+        * {
+            padding: 10px;
+            width: 100%;
+            background-color: black;
+            color: beige;
+            justify-content: center;
+        }
+        
+        button {
+            border-color: white;
+        }
 
-<div class="output_area">
+        input {
+            border-color: white;
+        }
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>my python kernel works
-</pre>
-</div>
-</div>
+        .container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 500px;
+            height: 300px;
+            background-color: gray;
+        }
 
-</div>
-</div>
+    </style>
 
-</div>
-    
+    <script>
 
-</div>
+        var num1 = document.getElementById('num1')
+        var num2 = document.getElementById('num2')
+        var res = document.getElementById('res')
 
+        var add = document.getElementById('add')
+        var sub = document.getElementById('sub')
+        var div = document.getElementById('div')
+        var mul = document.getElementById('mul')
+        
+        add.addEventListener('click', function() {
+            res.value = parseInt(num1.value)+parseInt(num2.value);
+        });
+        
+        sub.addEventListener('click', function() {
+            res.value = parseInt(num1.value) - parseInt(num2.value);
+        });
+        
+        div.addEventListener('click', function() {
+            res.value = parseInt(num1.value) / parseInt(num2.value);
+        });
+        
+        mul.addEventListener('click', function() {
+            res.value = parseInt(num1.value) * parseInt(num2.value);
+        });
+    </script>
 
-
-  </div><!-- from https://github.com/utterance/utterances -->
-<script src="https://utteranc.es/client.js"
-        repo="Unlqsting/blog"
-        issue-term="title"
-        label="blogpost-comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script><a class="u-url" href="/blog/hacks(tri2)/2022/11/18/pykernel.html" hidden></a>
-</article>
-
+</body>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/blog/"></data>
