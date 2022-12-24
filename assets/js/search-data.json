@@ -4,9 +4,9 @@
         "post0": {
             "title": "APCSP Vocab with examples",
             "content": "strings: . Strings: bunch of text. Can be anything inside a quotation marks . - concatenation: joining together two seperate strings - string length: length of the string . astring = &quot;this is a string&quot; anotherstring = &quot;!&quot; # string concatenation: concatenated_string = astring + anotherstring print(astring) print(concatenated_string) . this is a string this is a string!/n . Nested conditionals: . Basically a bunch of if, else, else if statements inside each other . if access_wifi == True: if loggedIn == True: if admin == True: print(&quot;you have accessed your wifi router and are able to make changes&quot;) else: print(&quot;you need to be an admin to make changes&quot;) else: print(&quot;you need to log in to access the wifi router&quot;) else: print(&quot;don&#39;t want to access the router? ok.&quot;) . simplified nested conditionals: . if (access_wifi, loggedIn, admin) != True: print(&quot;don&#39;t want to access the router? ok.&quot;) else: print(&quot;you have accessed your wifi router and are able to make changes&quot;) .",
-            "url": "https://unlqsting.github.io/blog/cspvocab/2022/12/18/APCSP-vocab.html",
-            "relUrl": "/cspvocab/2022/12/18/APCSP-vocab.html",
-            "date": " • Dec 18, 2022"
+            "url": "https://unlqsting.github.io/blog/cspvocab/2022/12/23/APCSP-vocab.html",
+            "relUrl": "/cspvocab/2022/12/23/APCSP-vocab.html",
+            "date": " • Dec 23, 2022"
         }
         
     
