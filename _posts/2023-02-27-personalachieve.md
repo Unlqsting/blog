@@ -1,9 +1,13 @@
-# Final Project Tri2
-> This blog contains the reflections, notes and code for the final project of the Tri2 CPT. 
-- toc: true
-- badges: true
-- categories: [CTP(tri2), week24, hacks(tri2)]
-- title: Final Project Tri2
+---
+keywords: fastai
+description: This blog contains the reflections, notes and code for the final project of the Tri2 CPT. 
+title: Final Project Tri2
+toc: true
+badges: true 
+comments: true 
+categories: [CTP(tri2), week24, hacks(tri2)]
+layout: markdown
+---
 
 # How to access my project (runtime Links)
 - Frontend: https://unlqsting.github.io/tracker/forum
