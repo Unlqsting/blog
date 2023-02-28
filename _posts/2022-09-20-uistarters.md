@@ -5,7 +5,7 @@ title: UI Starters
 toc: true
 badges: true 
 comments: true 
-categories: [tri1] 
+categories: [tri1]
 image: images/ui.png
 nb_path: _notebooks/2022-09-20-uistarters.ipynb
 layout: notebook
