@@ -1,0 +1,70 @@
+<h1 id="final-project-tri2">Final Project Tri2</h1>
+<blockquote>
+  <p>This blog contains the reflections, notes and code for the final project of the Tri2 CPT.</p>
+  <ul>
+    <li>toc: true</li>
+    <li>badges: true</li>
+    <li>categories: [CTP(tri2), week24, hacks(tri2)]</li>
+    <li>title: Final Project Tri2</li>
+  </ul>
+</blockquote>
+
+<h1 id="how-to-access-my-project-runtime-links">How to access my project (runtime Links)</h1>
+<ul>
+  <li>Frontend: https://unlqsting.github.io/tracker/forum</li>
+  <li>Backend: https://lennsflask.duckdns.org/api/forum/</li>
+</ul>
+
+<p>The first link leads you to the actual web app where you can access all of the features of my part of the group project.</p>
+
+<p>The second link leads you to the API endpoints of the project. I have linked my “read” endpoint above. The other endpoints for my part of the project are: /update, /delete, /create</p>
+
+<h1 id="technical-achievements">Technical Achievements:</h1>
+
+<p>Although most of my accomplishments are related to the frontend and creating a pleasant user experience, I still integrated features such as update and delete into the web app. I had been struggling with just getting the create and read feature to work, so I was very happy to get the other two features to work as well. Here is how I did it:</p>
+
+<ul>
+  <li><strong>Update</strong>: For this feature, getting the frontend to work was harder than the backend. The backend was much simpler. Once I had the frontend figured out where the user clicks on a post -&gt; a modal pop-up -&gt; user can now edit the post -&gt; user clicks submit -&gt; the post is updated in the database, I was able to implement the backend. The backend was just a simple PATCH request to the database.</li>
+</ul>
+
+<p><img src="attachment:image.png" alt="image.png" /></p>
+
+<p>This PATCH request was sent to the /update endpoint containing the post id and the new post content. The backend then updates the post in the database after doing some validation checks (<strong>garbage in, garbage out</strong>).</p>
+
+<p><img src="attachment:image-2.png" alt="image.png" /></p>
+
+<ul>
+  <li><strong>Delete</strong>: This feature was very simple. There was no struggle for this. It was simply just obtaining the id of the clicked post and then sending a DELETE request to the /delete endpoint with the post id.</li>
+</ul>
+
+<p><img src="attachment:image-3.png" alt="image.png" /></p>
+
+<p>The backend then searches through the database and looks for the specific id that was sent through the DELETE request. The backend then deletes the post from the database.</p>
+
+<p><img src="attachment:image-4.png" alt="image.png" /></p>
+
+<p>To control accidental deletes (<strong>garbage in, garbage out</strong>), I added a confirmation modal that pops up when the user clicks on the delete button.</p>
+
+<hr />
+
+<h1 id="personal-achievements-bonus">Personal achievements (bonus)</h1>
+
+<ul>
+  <li>I was able to get a modal to pop up when the user clicks on a post. This is done by adding an event listener to a specific html div. In the event listener, it listens for when the user clicks on a post and then it uses HTML String to create inputs with values being the post title and post body. This allows for the user to change their previous inputs of post title and post body. Clicking on the modal also allows the user to delete their blog post.</li>
+</ul>
+
+<p><img src="attachment:image-5.png" alt="image.png" /></p>
+
+<ul>
+  <li>talking about posts, a user can add a post the website is automatically reloaded to display the new post. This took hours for me to figure out and it was a lot of stack overflow. Here, I create a for loop that loops through a JSONified array and creates an interactable post object by using HTML String.</li>
+</ul>
+
+<p><img src="attachment:image-6.png" alt="image.png" /></p>
+
+<ul>
+  <li>Another personal achievement is not procrastinating. I was able to keep a schedule for when I would work on this project and I followed it.</li>
+</ul>
+
+<h3 id="why-are-these-personal-achievements">Why are these personal achievements?</h3>
+<p>I would consider these personal achievements because I was able to get my complicated ideas to turn into reality by just some hardwork. Usually, I would think about making this or doing that, but never really following through it. Especially the idea for the modal and displaying the posts was incredibly satisfying for me to complete. It just raised my self-esteem.</p>
+
