@@ -6,7 +6,7 @@ toc: true
 badges: true 
 comments: true 
 categories: [CTP(tri2), week24, hacks(tri2)]
-layout: markdown
+layout: post
 ---
 
 # How to access my project (runtime Links)
