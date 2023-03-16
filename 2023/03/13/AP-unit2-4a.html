@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 2.4a Using Programs with Data, SQLAlchemy | Do you even blog?</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 2.4a Using Programs with Data, SQLAlchemy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using Programs with Data is focused on SQL and database actions. Part A focuses on SQLAlchemy and an OOP programming style," />
+<meta property="og:description" content="Using Programs with Data is focused on SQL and database actions. Part A focuses on SQLAlchemy and an OOP programming style," />
+<link rel="canonical" href="https://unlqsting.github.io/blog/2023/03/13/AP-unit2-4a.html" />
+<meta property="og:url" content="https://unlqsting.github.io/blog/2023/03/13/AP-unit2-4a.html" />
+<meta property="og:site_name" content="Do you even blog?" />
+<meta property="og:image" content="https://unlqsting.github.io/blog/images/python.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-13T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://unlqsting.github.io/blog/images/python.png" />
+<meta property="twitter:title" content="Unit 2.4a Using Programs with Data, SQLAlchemy" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-13T00:00:00-05:00","datePublished":"2023-03-13T00:00:00-05:00","description":"Using Programs with Data is focused on SQL and database actions. Part A focuses on SQLAlchemy and an OOP programming style,","headline":"Unit 2.4a Using Programs with Data, SQLAlchemy","image":"https://unlqsting.github.io/blog/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://unlqsting.github.io/blog/2023/03/13/AP-unit2-4a.html"},"url":"https://unlqsting.github.io/blog/2023/03/13/AP-unit2-4a.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://unlqsting.github.io/blog/feed.xml" title="Do you even blog?" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /><script src="https://hypothes.is/embed.js" async></script>
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Do you even blog?</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/weeks/">Weeks</a><a class="page-link" href="/blog/API">API</a><a class="page-link" href="/blog/submenu/">Blog submenu</a><a class="page-link" href="/blog/calendar/">Calendar</a><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a><a class="page-link" href="/blog/vocab/">CSP Vocab</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 2.4a Using Programs with Data, SQLAlchemy</h1><p class="page-description">Using Programs with Data is focused on SQL and database actions.  Part A focuses on SQLAlchemy and an OOP programming style,</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-13T00:00:00-05:00" itemprop="datePublished">
+        Mar 13, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      15 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Unlqsting/blog/tree/master/_notebooks/2023-03-13-AP-unit2-4a.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Unlqsting/blog/master?filepath=_notebooks%2F2023-03-13-AP-unit2-4a.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Unlqsting/blog/blob/master/_notebooks/2023-03-13-AP-unit2-4a.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FUnlqsting%2Fblog%2Fblob%2Fmaster%2F_notebooks%2F2023-03-13-AP-unit2-4a.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/blog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Database-and-SQLAlchemy">Database and SQLAlchemy </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Imports-and-Flask-Objects">Imports and Flask Objects </a></li>
+<li class="toc-entry toc-h2"><a href="#Model-Definition">Model Definition </a></li>
+<li class="toc-entry toc-h2"><a href="#Initial-Data">Initial Data </a></li>
+<li class="toc-entry toc-h2"><a href="#Check-for-given-Credentials-in-users-table-in-sqlite.db">Check for given Credentials in users table in sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Reading-users-table-in-sqlite.db">Reading users table in sqlite.db </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-13-AP-unit2-4a.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Database-and-SQLAlchemy">
+<a class="anchor" href="#Database-and-SQLAlchemy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database and SQLAlchemy<a class="anchor-link" href="#Database-and-SQLAlchemy"> </a>
+</h1>
+<blockquote>
+<p>In this blog we will explore using programs with data, focused on Databases.  We will use SQLite Database to learn more about using Programs with Data.  <strong><em>Use Debugging through these examples to examine Objects created in Code</em></strong>.</p>
+</blockquote>
+<ul>
+<li>
+<p>College Board talks about ideas like</p>
+<ul>
+<li>Program Usage. "iterative and interactive way when processing information"</li>
+<li>Managing Data.  "classifying data are part of the process in using programs", "data files in a Table"</li>
+<li>Insight "insight and knowledge can be obtained from ...  digitally represented information"</li>
+<li>Filter systems. 'tools for finding information and recognizing patterns"</li>
+<li>Application. "the preserve has two databases", "an employee wants to count the number of book"</li>
+</ul>
+</li>
+<li>
+<p>PBL, Databases, Iterative/OOP</p>
+<ul>
+<li>Iterative. Refers to a sequence of instructions or code being repeated until a specific end result is achieved</li>
+<li>OOP. A computer programming model that organizes software design around data, or objects, rather than functions and logic</li>
+<li>SQL. Structured Query Language, abbreviated as SQL, is a language used in programming, managing, and structuring data </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Imports-and-Flask-Objects">
+<a class="anchor" href="#Imports-and-Flask-Objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Imports and Flask Objects<a class="anchor-link" href="#Imports-and-Flask-Objects"> </a>
+</h2>
+<blockquote>
+<p>Defines and key object creations</p>
+</blockquote>
+<ul>
+<li>Comment on where you have observed these working?  Provide a defintion of purpose.<ol>
+<li>Flask app object</li>
+<li>SQLAlchemy db object</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">These imports define the key objects</span>
+<span class="sd">"""</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="sd">"""</span>
+<span class="sd">These object and definitions are used throughout the Jupyter Notebook.</span>
+<span class="sd">"""</span>
+
+<span class="c1"># Setup of key Flask object (app)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///sqlite.db'</span>  <span class="c1"># path and filename of database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_TRACK_MODIFICATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_DATABASE_URI'</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SECRET_KEY'</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">()</span>
+
+
+<span class="c1"># This belongs in place where it runs once per project</span>
+<span class="n">db</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model-Definition">
+<a class="anchor" href="#Model-Definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Definition<a class="anchor-link" href="#Model-Definition"> </a>
+</h2>
+<blockquote>
+<p>Define columns, initialization, and CRUD methods for users table in sqlite.db</p>
+</blockquote>
+<ul>
+<li>Comment on these items in the class, purpose and defintion.<ul>
+<li>class User:<strong>**    - db.Model inheritance: </strong>db model is being put into the user class which allows us to use the different functions db.Model has**</li>
+<li>
+<em>init</em> method: <strong>sets up the attributes</strong>
+</li>
+<li>
+<code>@property</code>, <code>@&lt;column&gt;.setter</code>: <strong>For each attribute there is a property and setter. App property is a getter method and setter is a setter</strong>
+</li>
+<li>create, read, update, delete methods: <strong>CRUD methods. Example: getter method aligns with the read method. These methods are in the userclass.</strong>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import datetime</span>
+<span class="c1"># from datetime import datetime</span>
+<span class="c1"># import json</span>
+
+<span class="c1"># from sqlalchemy.exc import IntegrityError</span>
+<span class="c1"># from werkzeug.security import generate_password_hash, check_password_hash</span>
+
+
+<span class="c1"># ''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into a Python shell and follow along '''</span>
+
+<span class="c1"># # Define the User class to manage actions in the 'users' table</span>
+<span class="c1"># # -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy</span>
+<span class="c1"># # -- a.) db.Model is like an inner layer of the onion in ORM</span>
+<span class="c1"># # -- b.) User represents data we want to store, something that is built on db.Model</span>
+<span class="c1"># # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
+<span class="c1"># class User(db.Model):</span>
+<span class="c1">#     __tablename__ = 'users'  # table name is plural, class name is singular</span>
+
+<span class="c1">#     # Define the User schema with "vars" from object</span>
+<span class="c1">#     id = db.Column(db.Integer, primary_key=True)</span>
+<span class="c1">#     _name = db.Column(db.String(255), unique=False, nullable=False)</span>
+<span class="c1">#     _uid = db.Column(db.String(255), unique=True, nullable=False)</span>
+<span class="c1">#     _password = db.Column(db.String(255), unique=False, nullable=False)</span>
+<span class="c1">#     _dob = db.Column(db.Date)</span>
+
+<span class="c1">#     # constructor of a User object, initializes the instance variables within object (self)</span>
+<span class="c1">#     def __init__(self, name, uid, password="123qwerty", dob=datetime.today()):</span>
+<span class="c1">#         self._name = name    # variables with self prefix become part of the object, </span>
+<span class="c1">#         self._uid = uid</span>
+<span class="c1">#         self.set_password(password)</span>
+<span class="c1">#         if isinstance(dob, str):  # not a date type     </span>
+<span class="c1">#             dob = date=datetime.today()</span>
+<span class="c1">#         self._dob = dob</span>
+
+<span class="c1">#     # a name getter method, extracts name from object</span>
+<span class="c1">#     @property</span>
+<span class="c1">#     def name(self):</span>
+<span class="c1">#         return self._name</span>
+    
+<span class="c1">#     # a setter function, allows name to be updated after initial object creation</span>
+<span class="c1">#     @name.setter</span>
+<span class="c1">#     def name(self, name):</span>
+<span class="c1">#         self._name = name</span>
+    
+<span class="c1">#     # a getter method, extracts uid from object</span>
+<span class="c1">#     @property</span>
+<span class="c1">#     def uid(self):</span>
+<span class="c1">#         return self._uid</span>
+    
+<span class="c1">#     # a setter function, allows uid to be updated after initial object creation</span>
+<span class="c1">#     @uid.setter</span>
+<span class="c1">#     def uid(self, uid):</span>
+<span class="c1">#         self._uid = uid</span>
+        
+<span class="c1">#     # check if uid parameter matches user id in object, return boolean</span>
+<span class="c1">#     def is_uid(self, uid):</span>
+<span class="c1">#         return self._uid == uid</span>
+    
+<span class="c1">#     @property</span>
+<span class="c1">#     def password(self):</span>
+<span class="c1">#         return self._password[0:10] + "..." # because of security only show 1st characters</span>
+
+<span class="c1">#     # update password, this is conventional method used for setter</span>
+<span class="c1">#     def set_password(self, password):</span>
+<span class="c1">#         """Create a hashed password."""</span>
+<span class="c1">#         self._password = generate_password_hash(password, method='sha256')</span>
+
+<span class="c1">#     # check password parameter against stored/encrypted password</span>
+<span class="c1">#     def is_password(self, password):</span>
+<span class="c1">#         """Check against hashed password."""</span>
+<span class="c1">#         result = check_password_hash(self._password, password)</span>
+<span class="c1">#         return result</span>
+    
+<span class="c1">#     # dob property is returned as string, a string represents date outside object</span>
+<span class="c1">#     @property</span>
+<span class="c1">#     def dob(self):</span>
+<span class="c1">#         dob_string = self._dob.strftime('%m-%d-%Y')</span>
+<span class="c1">#         return dob_string</span>
+    
+<span class="c1">#     # dob setter, verifies date type before it is set or default to today</span>
+<span class="c1">#     @dob.setter</span>
+<span class="c1">#     def dob(self, dob):</span>
+<span class="c1">#         if isinstance(dob, str):  # not a date type     </span>
+<span class="c1">#             dob = date=datetime.today()</span>
+<span class="c1">#         self._dob = dob</span>
+    
+<span class="c1">#     # age is calculated field, age is returned according to date of birth</span>
+<span class="c1">#     @property</span>
+<span class="c1">#     def age(self):</span>
+<span class="c1">#         today = datetime.today()</span>
+<span class="c1">#         return today.year - self._dob.year - ((today.month, today.day) &lt; (self._dob.month, self._dob.day))</span>
+    
+<span class="c1">#     # output content using str(object) is in human readable form</span>
+<span class="c1">#     # output content using json dumps, this is ready for API response</span>
+<span class="c1">#     def __str__(self):</span>
+<span class="c1">#         return json.dumps(self.read())</span>
+
+<span class="c1">#     # CRUD create/add a new record to the table</span>
+<span class="c1">#     # returns self or None on error</span>
+<span class="c1">#     def create(self):</span>
+<span class="c1">#         try:</span>
+<span class="c1">#             # creates a person object from User(db.Model) class, passes initializers</span>
+<span class="c1">#             db.session.add(self)  # add prepares to persist person object to Users table</span>
+<span class="c1">#             db.session.commit()  # SqlAlchemy "unit of work pattern" requires a manual commit</span>
+<span class="c1">#             return self</span>
+<span class="c1">#         except IntegrityError:</span>
+<span class="c1">#             db.session.remove()</span>
+<span class="c1">#             return None</span>
+
+<span class="c1">#     # CRUD read converts self to dictionary</span>
+<span class="c1">#     # returns dictionary</span>
+<span class="c1">#     def read(self):</span>
+<span class="c1">#         return {</span>
+<span class="c1">#             "id": self.id,</span>
+<span class="c1">#             "name": self.name,</span>
+<span class="c1">#             "uid": self.uid,</span>
+<span class="c1">#             "dob": self.dob,</span>
+<span class="c1">#             "age": self.age,</span>
+<span class="c1">#         }</span>
+
+<span class="c1">#     # CRUD update: updates user name, password, phone</span>
+<span class="c1">#     # returns self</span>
+<span class="c1">#     def update(self, name="", uid="", password=""):</span>
+<span class="c1">#         """only updates values with length"""</span>
+<span class="c1">#         if len(name) &gt; 0:</span>
+<span class="c1">#             self.name = name</span>
+<span class="c1">#         if len(uid) &gt; 0:</span>
+<span class="c1">#             self.uid = uid</span>
+<span class="c1">#         if len(password) &gt; 0:</span>
+<span class="c1">#             self.set_password(password)</span>
+<span class="c1">#         db.session.commit()</span>
+<span class="c1">#         return self</span>
+
+<span class="c1">#     # CRUD delete: remove self</span>
+<span class="c1">#     # None</span>
+<span class="c1">#     def delete(self):</span>
+<span class="c1">#         db.session.delete(self)</span>
+<span class="c1">#         db.session.commit()</span>
+<span class="c1">#         return None</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Initial-Data">
+<a class="anchor" href="#Initial-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Data<a class="anchor-link" href="#Initial-Data"> </a>
+</h2>
+<blockquote>
+<p>Uses SQLALchemy db.create_all() to initialize rows into sqlite.db</p>
+</blockquote>
+<ul>
+<li>Comment on how these work?<ol>
+<li>Create All Tables from db Object:<strong>You need to first write db.create_all(). This will create a table. You can then put tester data into the table by creating a variable that contains all the attributes required. you can then run a for loop that runs through the tester data and puts it into the table.</strong>    2. User Object Constructors: <strong>Takes in inputs and then puts it together using the user() class.</strong>
+</li>
+<li>Try / Except: <strong>The function first looks at the given condition and if there is an error then the except condition is run.</strong>
+</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # Builds working data for testing</span>
+<span class="c1"># def initUsers():</span>
+<span class="c1">#     with app.app_context():</span>
+<span class="c1">#         """Create database and tables"""</span>
+<span class="c1">#         db.create_all()</span>
+<span class="c1">#         """Tester data for table"""</span>
+<span class="c1">#         u1 = User(name='Thomas Edison', uid='toby', password='123toby', dob=datetime(1847, 2, 11))</span>
+<span class="c1">#         u2 = User(name='Nikola Tesla', uid='niko', password='123niko')</span>
+<span class="c1">#         u3 = User(name='Alexander Graham Bell', uid='lex', password='123lex')</span>
+<span class="c1">#         u4 = User(name='Eli Whitney', uid='whit', password='123whit')</span>
+<span class="c1">#         u5 = User(name='Indiana Jones', uid='indi', dob=datetime(1920, 10, 21))</span>
+<span class="c1">#         u6 = User(name='Marion Ravenwood', uid='raven', dob=datetime(1921, 10, 21))</span>
+
+
+<span class="c1">#         users = [u1, u2, u3, u4, u5, u6]</span>
+
+<span class="c1">#         """Builds sample user/note(s) data"""</span>
+<span class="c1">#         for user in users:</span>
+<span class="c1">#             try:</span>
+<span class="c1">#                 '''add user to table'''</span>
+<span class="c1">#                 object = user.create()</span>
+<span class="c1">#                 print(f"Created new uid {object.uid}")</span>
+<span class="c1">#             except:  # error raised if object nit created</span>
+<span class="c1">#                 '''fails with bad or duplicate data'''</span>
+<span class="c1">#                 print(f"Records exist uid {user.uid}, or error.")</span>
+                
+<span class="c1"># initUsers()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Check-for-given-Credentials-in-users-table-in-sqlite.db">
+<a class="anchor" href="#Check-for-given-Credentials-in-users-table-in-sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Check for given Credentials in users table in sqlite.db<a class="anchor-link" href="#Check-for-given-Credentials-in-users-table-in-sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Use of ORM Query object and custom methods to identify user to credentials uid and password</p>
+</blockquote>
+<ul>
+<li>Comment on purpose of following<ol>
+<li>User.query.filter_by:<strong>This allows you to look through the database and find the specific user with whatever specific attribute you are looking for.</strong>    2. user.password: <strong>This will allow the user to login or help the developer make sure it is the user trying the login.</strong>
+</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># def find_by_uid(uid):</span>
+<span class="c1">#     with app.app_context():</span>
+<span class="c1">#         user = User.query.filter_by(_uid=uid).first()</span>
+<span class="c1">#     return user # returns user object</span>
+
+<span class="c1"># # Check credentials by finding user and verify password</span>
+<span class="c1"># def check_credentials(uid, password):</span>
+<span class="c1">#     # query email and return user record</span>
+<span class="c1">#     user = find_by_uid(uid)</span>
+<span class="c1">#     if user == None:</span>
+<span class="c1">#         return False</span>
+<span class="c1">#     if (user.is_password(password)):</span>
+<span class="c1">#         return True</span>
+<span class="c1">#     return False</span>
+        
+<span class="c1"># #check_credentials("indi", "123qwerty")</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-a-new-User-in-table-in-Sqlite.db">
+<a class="anchor" href="#Create-a-new-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a new User in table in Sqlite.db<a class="anchor-link" href="#Create-a-new-User-in-table-in-Sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses SQLALchemy and custom user.create() method to add row.</p>
+</blockquote>
+<ul>
+<li>Comment on purpose of following<ol>
+<li>user.find_by_uid() and try/except:<strong>This will set user to the filter method. Allows the developer to run the function 'find_by_uid()' whenever user is called. Then the this can be used in the try/except.</strong>    2. user = User(...): <strong>This sets the variable user to the User() class with the inputted attributes.</strong>
+</li>
+<li>user.dob and try/except: <strong>This takes the users dob through a manual input and then adds it to the object. if the user didn't input a dob, then the dob is set to the current day.</strong>
+</li>
+<li>user.create() and try/except: <strong>creates a user in the database if no conditions are violated. If there is an error then the 'except' condition is raised.</strong>
+</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># def create():</span>
+<span class="c1">#     # optimize user time to see if uid exists</span>
+<span class="c1">#     uid = input("Enter your user id:")</span>
+<span class="c1">#     user = find_by_uid(uid)</span>
+<span class="c1">#     try:</span>
+<span class="c1">#         print("Found\n", user.read())</span>
+<span class="c1">#         return</span>
+<span class="c1">#     except:</span>
+<span class="c1">#         pass # keep going</span>
+    
+<span class="c1">#     # request value that ensure creating valid object</span>
+<span class="c1">#     name = input("Enter your name:")</span>
+<span class="c1">#     password = input("Enter your password")</span>
+    
+<span class="c1">#     # Initialize User object before date</span>
+<span class="c1">#     user = User(name=name, </span>
+<span class="c1">#                 uid=uid, </span>
+<span class="c1">#                 password=password</span>
+<span class="c1">#                 )</span>
+    
+<span class="c1">#     # create user.dob, fail with today as dob</span>
+<span class="c1">#     dob = input("Enter your date of birth 'YYYY-MM-DD'")</span>
+<span class="c1">#     try:</span>
+<span class="c1">#         user.dob = datetime.strptime(dob, '%Y-%m-%d').date()</span>
+<span class="c1">#     except ValueError:</span>
+<span class="c1">#         user.dob = datetime.today()</span>
+<span class="c1">#         print(f"Invalid date {dob} require YYYY-mm-dd, date defaulted to {user.dob}")</span>
+           
+<span class="c1">#     # write object to database</span>
+<span class="c1">#     with app.app_context():</span>
+<span class="c1">#         try:</span>
+<span class="c1">#             object = user.create()</span>
+<span class="c1">#             print("Created\n", object.read())</span>
+<span class="c1">#         except:  # error raised if object not created</span>
+<span class="c1">#             print("Unknown error uid {uid}")</span>
+        
+<span class="c1"># create()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-users-table-in-sqlite.db">
+<a class="anchor" href="#Reading-users-table-in-sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading users table in sqlite.db<a class="anchor-link" href="#Reading-users-table-in-sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses SQLALchemy query.all method to read data</p>
+</blockquote>
+<ul>
+<li>Comment on purpose of following<ol>
+<li>User.query.all:<strong>This queries through the database and displays all the data in it. Useful for displaying the the user data on a frontend screen.</strong>    2. json_ready assignment, google List Comprehension: <strong>This jsonifies the data and then returns it.</strong>
+</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # SQLAlchemy extracts all users from database, turns each user into JSON</span>
+<span class="c1"># def read():</span>
+<span class="c1">#     with app.app_context():</span>
+<span class="c1">#         table = User.query.all()</span>
+<span class="c1">#     json_ready = [user.read() for user in table] # "List Comprehensions", for each user add user.read() to list</span>
+<span class="c1">#     return json_ready</span>
+
+<span class="c1"># read()</span>
+
+<span class="c1"># def patch():</span>
+<span class="c1">#     uid = input("Enter user id to update:")</span>
+    
+<span class="c1">#     userUpd = User.query.filter_by(_uid=uid).first()</span>
+    
+<span class="c1">#     userUpd.update(uid)</span>
+
+<span class="c1"># patch()</span>
+    
+
+<span class="c1"># def delete():</span>
+<span class="c1">#     uid = input("Enter user id to delete:")</span>
+    
+<span class="c1">#     userUpd = User.query.filter_by(_uid=uid).first()</span>
+    
+<span class="c1">#     userUpd.delete(uid)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h1>
+<ul>
+<li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
+<li>Change blog to your own database.</li>
+<li>Add additional CRUD<ul>
+<li>Add Update functionality to this blog.</li>
+<li>Add Delete functionality to this blog.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">""" database dependencies to support sqliteDB examples """</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+<span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
+
+
+<span class="sd">''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along '''</span>
+
+<span class="c1"># Define the Post class to manage actions in 'posts' table,  with a relationship to 'users' table</span>
+<span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'forumPosts'</span>
+
+    <span class="c1"># Define the Notes schema</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">postTitle</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">post</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># Define a relationship in Notes Schema to userID who originates the note, many-to-one (many notes to one user)</span>
+
+    <span class="c1"># Constructor of a Notes object, initializes of instance variables within object</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">postTitle</span><span class="p">,</span> <span class="n">post</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">postTitle</span> <span class="o">=</span> <span class="n">postTitle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">post</span> <span class="o">=</span> <span class="n">post</span>
+
+
+    <span class="c1"># Returns a string representation of the Notes object, similar to java toString()</span>
+    <span class="c1"># returns string</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">"Posts("</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">","</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">postTitle</span> <span class="o">+</span> <span class="s2">","</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span> <span class="o">+</span> <span class="s2">","</span> <span class="o">+</span> <span class="s2">")"</span>
+
+    <span class="c1"># CRUD create, adds a new record to the Notes table</span>
+    <span class="c1"># returns the object added or None in case of an error</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># creates a Notes object from Notes(db.Model) class, passes initializers</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># add prepares to persist person object to Notes table</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># SqlAlchemy "unit of work pattern" requires a manual commit</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># CRUD read, returns dictionary representation of Notes object</span>
+    <span class="c1"># returns dictionary</span>
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>   
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">"id"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">"postTitle"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">postTitle</span><span class="p">,</span>
+            <span class="s2">"post"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span>
+        <span class="p">}</span>
+
+    <span class="c1"># CRUD update, updates a record in the Notes table</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">postTitle</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
+        <span class="sd">"""only updates values with length"""</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">postTitle</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">postTitle</span> <span class="o">=</span> <span class="n">postTitle</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">post</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">post</span> <span class="o">=</span> <span class="n">post</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="c1"># CRUD delete: remove self</span>
+    <span class="c1"># None</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="c1"># Define the User class to manage actions in the 'users' table</span>
+<span class="c1"># -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy</span>
+<span class="c1"># -- a.) db.Model is like an inner layer of the onion in ORM</span>
+<span class="c1"># -- b.) User represents data we want to store, something that is built on db.Model</span>
+<span class="c1"># -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
+
+
+
+<span class="c1"># Builds working data for testing</span>
+<span class="k">def</span> <span class="nf">initPost</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="sd">"""Create database and tables"""</span>
+        <span class="c1"># db.init_app(app)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+        <span class="c1">#! """Tester data for table"""</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Post</span><span class="p">(</span><span class="n">postTitle</span><span class="o">=</span><span class="s1">'First post'</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="s1">'This is my first post'</span><span class="p">)</span>
+        <span class="n">p2</span> <span class="o">=</span> <span class="n">Post</span><span class="p">(</span><span class="n">postTitle</span><span class="o">=</span><span class="s1">'Second post'</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="s1">'This is my second post'</span><span class="p">)</span>
+        <span class="n">p3</span> <span class="o">=</span> <span class="n">Post</span><span class="p">(</span><span class="n">postTitle</span><span class="o">=</span><span class="s1">'Third post'</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="s1">'This is my third post'</span><span class="p">)</span>
+        
+        <span class="n">posts</span> <span class="o">=</span> <span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">]</span>
+
+        <span class="c1">#! """Builds sample user/note(s) data"""</span>
+        <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="sd">'''add a few 1 to 4 notes per user'''</span>
+                <span class="n">post</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+                <span class="sd">'''fails with bad or duplicate data'''</span>
+                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">posts</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">None</span>
+<span class="n">initPost</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+<span class="kn">from</span> <span class="nn">flask_restful</span> <span class="kn">import</span> <span class="n">Api</span><span class="p">,</span> <span class="n">Resource</span> <span class="c1"># used for REST API building</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">redirect</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_login</span> <span class="kn">import</span> <span class="n">LoginManager</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+<span class="kn">from</span> <span class="nn">flask_migrate</span> <span class="kn">import</span> <span class="n">Migrate</span>
+<span class="kn">from</span> <span class="nn">flask_cors</span> <span class="kn">import</span> <span class="n">CORS</span>
+
+<span class="sd">"""</span>
+<span class="sd">These object can be used throughout project.</span>
+<span class="sd">1.) Objects from this file can be included in many blueprints</span>
+<span class="sd">2.) Isolating these object definitions avoids duplication and circular dependencies</span>
+<span class="sd">"""</span>
+
+<span class="c1"># Setup of key Flask object (app)</span>
+<span class="c1"># app = Flask(__name__)</span>
+<span class="c1"># CORS(app)</span>
+<span class="k">def</span> <span class="nf">post</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+    <span class="c1"># validate </span>
+        <span class="n">postTitle</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter post title: "</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">postTitle</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">postTitle</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'post tile is missing, or is less than 2 characters'</span><span class="p">},</span> <span class="mi">211</span>
+        
+        <span class="n">post</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter post: "</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">post</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">post</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'please describe your post adequately'</span><span class="p">},</span> <span class="mi">212</span>
+
+        <span class="sd">''' #1: Key code block, setup post OBJECT '''</span>
+        <span class="n">uo</span> <span class="o">=</span> <span class="n">Post</span><span class="p">(</span>
+                    <span class="n">postTitle</span><span class="o">=</span><span class="n">postTitle</span><span class="p">,</span> 
+                    <span class="n">post</span><span class="o">=</span><span class="n">post</span><span class="p">,</span>
+                    <span class="p">)</span>
+
+        <span class="c1"># create post in database</span>
+        <span class="n">uo</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+        <span class="c1"># success returns json of post</span>
+        <span class="c1"># if createPost:</span>
+        <span class="c1">#     redirect_url = 'https://unlqsting.github.io/tracker/forum'</span>
+        <span class="c1">#     return redirect(redirect_url)</span>
+        <span class="c1"># failure returns error</span>
+<span class="n">post</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="n">posts</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>    <span class="c1"># read/extract all posts from database</span>
+        <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">createPost</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">createPost</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">]</span>
+        <span class="c1"># prepare output in json</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">json_ready</span><span class="p">))</span>
+
+<span class="n">get</span><span class="p">()</span>
+        
+    <span class="c1"># jsonify creates Flask response object, more specific to APIs than json.dumps</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;Response 281 bytes [200 OK]&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">patch</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+    
+        <span class="n">lookId</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ID of post you want to update: "</span><span class="p">)</span>
+        <span class="n">postTitle</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter new post title: "</span><span class="p">)</span>
+        <span class="n">post</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter new post: "</span><span class="p">)</span>
+        <span class="n">postupd</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">lookId</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+        
+        
+        <span class="sd">''' Avoid garbage in, error checking '''</span>
+        
+        <span class="k">if</span> <span class="n">postTitle</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">postTitle</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'post title is missing or is less than 2 characters'</span><span class="p">},</span> <span class="mi">211</span>
+        
+        
+        <span class="k">if</span> <span class="n">post</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">post</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s1">'message'</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'post is missing or is less than 12 characters'</span><span class="p">},</span> <span class="mi">212</span>
+
+        <span class="n">postupd</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">postTitle</span><span class="p">,</span> <span class="n">post</span><span class="p">)</span>
+<span class="n">patch</span><span class="p">()</span>
+        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
+    <span class="sd">''' Read data for json body '''</span>
+    
+    
+    <span class="n">lookId</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ID of post you want to delete: "</span><span class="p">)</span>
+    <span class="n">postdel</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">lookId</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+    
+    <span class="n">postdel</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+    
+<span class="n">delete</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/blog/2023/03/13/AP-unit2-4a.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://unlqsting.github.io/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blogging site for AP Computer Science</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
