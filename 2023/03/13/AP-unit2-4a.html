@@ -476,6 +476,34 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">/tmp/ipykernel_948/276902621.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     28</span>                 print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f"Records exist uid {user.uid}, or error."</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     29</span> 
+<span class="ansi-green-fg">---&gt; 30</span><span class="ansi-red-fg"> </span>initUsers<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/tmp/ipykernel_948/276902621.py</span> in <span class="ansi-cyan-fg">initUsers</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span>         db<span class="ansi-blue-fg">.</span>create_all<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span>         <span class="ansi-blue-fg">"""Tester data for table"""</span>
+<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg">         </span>u1 <span class="ansi-blue-fg">=</span> User<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'Thomas Edison'</span><span class="ansi-blue-fg">,</span> uid<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'toby'</span><span class="ansi-blue-fg">,</span> password<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'123toby'</span><span class="ansi-blue-fg">,</span> dob<span class="ansi-blue-fg">=</span>datetime<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1847</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">11</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span>         u2 <span class="ansi-blue-fg">=</span> User<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'Nikola Tesla'</span><span class="ansi-blue-fg">,</span> uid<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'niko'</span><span class="ansi-blue-fg">,</span> password<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'123niko'</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     12</span>         u3 <span class="ansi-blue-fg">=</span> User<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'Alexander Graham Bell'</span><span class="ansi-blue-fg">,</span> uid<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'lex'</span><span class="ansi-blue-fg">,</span> password<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'123lex'</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name 'User' is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -865,6 +893,22 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>({'message': 'post tile is missing, or is less than 2 characters'}, 211)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -880,7 +924,7 @@ window.onload = wrap_img;
         <span class="n">posts</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>    <span class="c1"># read/extract all posts from database</span>
         <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">createPost</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">createPost</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">]</span>
         <span class="c1"># prepare output in json</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">json_ready</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">json_ready</span><span class="p">)</span>
 
 <span class="n">get</span><span class="p">()</span>
         
@@ -897,7 +941,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;Response 281 bytes [200 OK]&gt;
+<pre>[{'id': 1, 'postTitle': 'ofnsekjf', 'post': 'this is the update post'}, {'id': 3, 'postTitle': 'Third post', 'post': 'This is my third post'}, {'id': 4, 'postTitle': 'test post 2 ', 'post': 'this is a test post please just work'}, {'id': 5, 'postTitle': 'tester post 3', 'post': 'thish is a nfjnetkjs  a'}]
 </pre>
 </div>
 </div>
@@ -954,12 +998,12 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
     <span class="sd">''' Read data for json body '''</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
     
-    
-    <span class="n">lookId</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ID of post you want to delete: "</span><span class="p">)</span>
-    <span class="n">postdel</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">lookId</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
-    
-    <span class="n">postdel</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+        <span class="n">lookId</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the ID of post you want to delete: "</span><span class="p">)</span>
+        <span class="n">postdel</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">lookId</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+        
+        <span class="n">postdel</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
     
 <span class="n">delete</span><span class="p">()</span>
 </pre></div>
