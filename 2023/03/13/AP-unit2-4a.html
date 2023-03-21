@@ -476,34 +476,6 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_948/276902621.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     28</span>                 print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f"Records exist uid {user.uid}, or error."</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     29</span> 
-<span class="ansi-green-fg">---&gt; 30</span><span class="ansi-red-fg"> </span>initUsers<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/tmp/ipykernel_948/276902621.py</span> in <span class="ansi-cyan-fg">initUsers</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span>         db<span class="ansi-blue-fg">.</span>create_all<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span>         <span class="ansi-blue-fg">"""Tester data for table"""</span>
-<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg">         </span>u1 <span class="ansi-blue-fg">=</span> User<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'Thomas Edison'</span><span class="ansi-blue-fg">,</span> uid<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'toby'</span><span class="ansi-blue-fg">,</span> password<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'123toby'</span><span class="ansi-blue-fg">,</span> dob<span class="ansi-blue-fg">=</span>datetime<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1847</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">11</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span>         u2 <span class="ansi-blue-fg">=</span> User<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'Nikola Tesla'</span><span class="ansi-blue-fg">,</span> uid<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'niko'</span><span class="ansi-blue-fg">,</span> password<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'123niko'</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     12</span>         u3 <span class="ansi-blue-fg">=</span> User<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'Alexander Graham Bell'</span><span class="ansi-blue-fg">,</span> uid<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'lex'</span><span class="ansi-blue-fg">,</span> password<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'123lex'</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'User' is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -893,22 +865,6 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>({'message': 'post tile is missing, or is less than 2 characters'}, 211)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -941,7 +897,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{'id': 1, 'postTitle': 'ofnsekjf', 'post': 'this is the update post'}, {'id': 3, 'postTitle': 'Third post', 'post': 'This is my third post'}, {'id': 4, 'postTitle': 'test post 2 ', 'post': 'this is a test post please just work'}, {'id': 5, 'postTitle': 'tester post 3', 'post': 'thish is a nfjnetkjs  a'}]
+<pre>[{'id': 1, 'postTitle': 'ofnsekjf', 'post': 'this is the update post'}, {'id': 3, 'postTitle': 'Third post', 'post': 'This is my third post'}, {'id': 4, 'postTitle': 'test post 2 ', 'post': 'this is a test post please just work'}, {'id': 5, 'postTitle': 'tester post 3', 'post': 'thish is a nfjnetkjs  a'}, {'id': 6, 'postTitle': 'First post', 'post': 'This is my first post'}, {'id': 7, 'postTitle': 'Second post', 'post': 'This is my second post'}, {'id': 8, 'postTitle': 'tester post 5', 'post': 'this is the fifth tester post'}]
 </pre>
 </div>
 </div>
@@ -986,6 +942,22 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>({'message': 'post title is missing or is less than 2 characters'}, 211)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -1009,6 +981,34 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-fg">/tmp/ipykernel_1386/1336135512.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span>         postdel<span class="ansi-blue-fg">.</span>delete<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> 
+<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg"> </span>delete<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/tmp/ipykernel_1386/1336135512.py</span> in <span class="ansi-cyan-fg">delete</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>         postdel <span class="ansi-blue-fg">=</span> Post<span class="ansi-blue-fg">.</span>query<span class="ansi-blue-fg">.</span>filter_by<span class="ansi-blue-fg">(</span>id<span class="ansi-blue-fg">=</span>lookId<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>first<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> 
+<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg">         </span>postdel<span class="ansi-blue-fg">.</span>delete<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> 
+<span class="ansi-green-intense-fg ansi-bold">     10</span> delete<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">AttributeError</span>: 'NoneType' object has no attribute 'delete'</pre>
+</div>
+</div>
+
 </div>
 </div>
 
