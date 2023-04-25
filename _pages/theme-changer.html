@@ -1,0 +1,41 @@
+---
+layout: post
+permalink: /themechange/
+title: Theme changer
+---
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/fastpages-styles.css">
+    <link rel="stylesheet" href="../assets/css/other-style.css" id="theme-link">
+    <link rel="stylesheet" href="../assets/css/mort-style.css" id="theme-link2">
+</head>
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+    <button id="theme-toggle2">Toggle other Theme</button>
+    <!--  -->
+    <script>
+        const toggleButton = document.querySelector('#theme-toggle');
+        const toggleButton2 = document.querySelector('#theme-toggle2');
+
+        const themeLink = document.querySelector('#theme-link');
+        const themeLink2 = document.querySelector('#theme-link2');
+
+        toggleButton.addEventListener('click', () => {
+            if (themeLink.getAttribute('href') === '../assets/css/fastpages-styles.css') {
+                themeLink.setAttribute('href', '../assets/css/other-style.css');
+            } else {
+                themeLink.setAttribute('href', '../assets/css/fastpages-styles.css');
+            }
+        });
+  
+        toggleButton2.addEventListener('click', () => {
+            if (themeLink2.getAttribute('href') === '../assets/css/fastpages-styles.css') {
+                themeLink2.setAttribute('href', '../assets/css/mort-style.css');
+            } else {
+                themeLink2.setAttribute('href', '../assets/css/fastpages-styles.css');
+            }
+        });
+    </script>
+</body>
+</html>
