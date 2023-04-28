@@ -9,17 +9,21 @@ title: Theme changer
     <link rel="stylesheet" href="../assets/css/fastpages-styles.css">
     <link rel="stylesheet" href="../assets/css/other-style.css" id="theme-link">
     <link rel="stylesheet" href="../assets/css/mort-style.css" id="theme-link2">
+    <link rel="stylesheet" href="../assets/css/white.css" id="theme-link3">
 </head>
 <body>
     <button id="theme-toggle">Toggle Theme</button>
     <button id="theme-toggle2">Toggle other Theme</button>
+    <button id="theme-toggle3">Toggle other other Theme</button>
     <!--  -->
     <script>
         const toggleButton = document.querySelector('#theme-toggle');
         const toggleButton2 = document.querySelector('#theme-toggle2');
+        const toggleButton3 = document.querySelector('#theme-toggle3');
 
         const themeLink = document.querySelector('#theme-link');
         const themeLink2 = document.querySelector('#theme-link2');
+        const themeLink3 = document.querySelector('#theme-link3');
 
         toggleButton.addEventListener('click', () => {
             if (themeLink.getAttribute('href') === '../assets/css/fastpages-styles.css') {
@@ -36,6 +40,34 @@ title: Theme changer
                 themeLink2.setAttribute('href', '../assets/css/fastpages-styles.css');
             }
         });
+
+        toggleButton3.addEventListener('click', () => {
+            if (themeLink3.getAttribute('href') === '../assets/css/fastpages-styles.css') {
+                themeLink3.setAttribute('href', '../assets/css/white.css');
+            } else if (themeLink3.getAttribute('href') === '../assets/css/mort-style.css') {
+                themeLink3.setAttribute('href', '../assets/css/white.css'); }
+            else {
+                themeLink3.setAttribute('href', '../assets/css/fastpages-styles.css');
+            }
+        });
     </script>
+    <style>
+        button {
+            background-color: #3d8b7e;
+            border-style: outset;
+            color: white;
+            padding: 15px 32px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        button :hover {
+            background-color: #3e718e;
+        }
+        
+    </style>
 </body>
 </html>
