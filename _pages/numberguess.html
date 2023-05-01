@@ -1,9 +1,9 @@
 ---
 title: Number Guesser 
-layout: page
+permalink: /numberguess/
+layout: default
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,6 @@ layout: page
         <button id="button1" onclick="checkGuess()">Submit</button>
         <p id="result"></p>
     </div>
-
   <script>
     // Generate a random number between 1 and 100
     const randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -37,7 +36,6 @@ layout: page
       // Check if the guess is correct
       if (guess === randomNumber) {
         document.getElementById("result").innerHTML = `Congratulations! You guessed the number in ${attempts} attempts.`;
-        document.body.style.background = "green"
       } else if (guess < randomNumber) {
         document.getElementById("result").innerHTML = "Too low. Guess again.";
       } else {
