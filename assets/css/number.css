@@ -1,3 +1,24 @@
+* {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 30%;
+  background-color: rgba(0, 0, 0);
+  padding: 5vh 0;
+  color: white;
+}
 button {
   border-color: white;
   border-style: outset;
@@ -20,7 +41,7 @@ input {
   font-size: 20px;
   padding: 5px;
   margin: 5px;
-  width: 20%;
+  width: 25%;
   outline: none;
   overflow: scroll;
 }
@@ -35,7 +56,7 @@ h1 {
   padding: 0;
 }
 
-.wrapper {
+/* .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,8 +65,10 @@ h1 {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  height: 30%;
+  background-color: rgba(0, 0, 0);
   padding: 5vh 0;
-}/*# sourceMappingURL=number.css.map */
+  color: white;
+} */
+/*# sourceMappingURL=number.css.map */
